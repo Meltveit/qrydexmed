@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Header() {
@@ -7,8 +8,15 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 py-4">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2">
-                        <span className="text-2xl">🧬</span>
-                        <span className="font-bold text-xl text-slate-900">LongevityIndex</span>
+                        <div className="relative h-10 w-48">
+                            <Image
+                                src="/logo.png"
+                                alt="LongevityIndex"
+                                fill
+                                className="object-contain object-left"
+                                priority
+                            />
+                        </div>
                     </Link>
 
                     <nav className="hidden md:flex items-center gap-8">

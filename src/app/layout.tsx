@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { OrganizationSchema, WebSiteSchema } from "@/components/Schema";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-ES9S2XGF6N";
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +23,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://longevityindex.com"),
   alternates: {
     canonical: "/",
+  },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png", // Ideally generate a specific apple touch icon, but this works for now
   },
   openGraph: {
     title: "LongevityIndex - Global Longevity Clinic Directory",
@@ -60,6 +67,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         <OrganizationSchema />
         <WebSiteSchema />
       </head>
