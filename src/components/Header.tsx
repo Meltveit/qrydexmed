@@ -8,7 +8,7 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 py-4">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2">
-                        <div className="relative h-10 w-48">
+                        <div className="relative h-14 w-60">
                             <Image
                                 src="/logo.png"
                                 alt="LongevityIndex"
