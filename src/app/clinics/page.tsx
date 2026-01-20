@@ -71,15 +71,23 @@ export default async function ClinicsPage() {
 
                                     <p className="text-slate-600 text-sm mb-4 line-clamp-2">{clinic.description}</p>
 
-                                    {clinic.certifications && (
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {JSON.parse(clinic.certifications).slice(0, 2).map((cert: string, i: number) => (
-                                                <span key={i} className="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">
-                                                    {cert}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    )}
+                                    {clinic.certifications && (() => {
+                                        let certs: string[] = [];
+                                        try {
+                                            certs = typeof clinic.certifications === 'string'
+                                                ? JSON.parse(clinic.certifications)
+                                                : clinic.certifications;
+                                        } catch { certs = []; }
+                                        return certs.length > 0 && (
+                                            <div className="flex flex-wrap gap-2 mb-4">
+                                                {certs.slice(0, 2).map((cert: string, i: number) => (
+                                                    <span key={i} className="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">
+                                                        {cert}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        );
+                                    })()}
 
                                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                                         <Link
