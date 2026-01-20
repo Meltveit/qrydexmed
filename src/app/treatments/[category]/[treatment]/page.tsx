@@ -72,9 +72,21 @@ export default async function TreatmentDetailPage({ params }: Props) {
         .order('medical_hub_ranking')
         .limit(6);
 
-    // Parse benefits and risks
-    const benefits = treatment.benefits ? JSON.parse(treatment.benefits) : [];
-    const risks = treatment.risks ? JSON.parse(treatment.risks) : [];
+    // Parse benefits and risks safely
+    const parseList = (data: any) => {
+        if (!data) return [];
+        if (Array.isArray(data)) return data;
+        try {
+            const parsed = JSON.parse(data);
+            return Array.isArray(parsed) ? parsed : [data];
+        } catch {
+            // If parse fails, assume it's a plain string and wrap in array
+            return [data];
+        }
+    };
+
+    const benefits = parseList(treatment.benefits);
+    const risks = parseList(treatment.risks);
 
     return (
         <div className="min-h-screen bg-white">

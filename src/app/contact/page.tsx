@@ -1,200 +1,122 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, ArrowRight, CheckCircle } from 'lucide-react';
+import { Mail, ArrowRight, Building2, User } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Contact Us - LongevityIndex',
+    description: 'Contact LongevityIndex for help finding a clinic or listing your medical center.',
+};
 
 export default function ContactPage() {
-    const [submitted, setSubmitted] = useState(false);
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        treatment: '',
-        destination: '',
-        message: ''
-    });
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        // In production, this would submit to an API
-        setSubmitted(true);
-    };
-
-    if (submitted) {
-        return (
-            <div className="min-h-screen bg-white flex items-center justify-center px-4">
-                <div className="max-w-md text-center">
-                    <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <CheckCircle className="w-8 h-8 text-emerald-600" />
-                    </div>
-                    <h1 className="text-3xl font-bold mb-4 text-slate-900">Thank You!</h1>
-                    <p className="text-slate-600 mb-8">
-                        We've received your inquiry and will connect you with the best clinics within 24-48 hours.
-                    </p>
-                    <Link
-                        href="/"
-                        className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-semibold transition"
-                    >
-                        Back to Home <ArrowRight className="w-4 h-4" />
-                    </Link>
-                </div>
-            </div>
-        );
-    }
-
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="py-16 px-4 bg-gradient-to-br from-emerald-50 to-cyan-50">
-                <div className="max-w-7xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
-                        Get a <span className="gradient-text">Free Consultation</span>
-                    </h1>
-                    <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                        Tell us about your treatment goals and we'll connect you with the best clinics worldwide.
-                    </p>
-                </div>
+            <section className="py-20 px-4 text-center bg-gradient-to-br from-emerald-50 to-cyan-50">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+                    Get in <span className="gradient-text">Touch</span>
+                </h1>
+                <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                    Whether you are a patient looking for care or a clinic looking to partner,
+                    we are here to help.
+                </p>
             </section>
 
-            <section className="py-12 px-4">
-                <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
-                    {/* Contact Info */}
-                    <div className="md:col-span-1 space-y-6">
-                        <div className="bg-slate-50 rounded-xl p-6">
-                            <h3 className="font-semibold mb-4 text-slate-900">Why Contact Us?</h3>
-                            <ul className="space-y-3 text-sm text-slate-600">
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5" />
-                                    <span>Free clinic recommendations</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5" />
-                                    <span>Price comparisons</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5" />
-                                    <span>Help with travel logistics</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5" />
-                                    <span>Verified clinic connections</span>
-                                </li>
-                            </ul>
+            <section className="max-w-7xl mx-auto px-4 py-16">
+                <div className="grid md:grid-cols-2 gap-12">
+                    {/* For Patients */}
+                    <div className="bg-white border border-slate-200 rounded-2xl p-8 hover:border-emerald-300 transition shadow-sm">
+                        <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                            <User className="w-8 h-8 text-emerald-600" />
                         </div>
-
-                        <div className="bg-slate-50 rounded-xl p-6">
-                            <h3 className="font-semibold mb-4 text-slate-900">Contact Direct</h3>
-                            <div className="space-y-3 text-sm">
-                                <a href="mailto:hello@longevityindex.com" className="flex items-center gap-2 text-slate-600 hover:text-emerald-600">
-                                    <Mail className="w-4 h-4" />
-                                    hello@longevityindex.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Form */}
-                    <div className="md:col-span-2">
-                        <form onSubmit={handleSubmit} className="bg-white border border-slate-200 rounded-xl p-8">
-                            <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <h2 className="text-2xl font-bold text-slate-900 mb-4">For Patients</h2>
+                        <p className="text-slate-600 mb-6">
+                            Need help finding the right longevity clinic or treatment? Our team can guide you to verified providers worldwide.
+                        </p>
+                        <ul className="space-y-3 mb-8 text-slate-600">
+                            <li className="flex items-center gap-2">
+                                <span className="text-emerald-500">✓</span> Free clinic recommendations
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-emerald-500">✓</span> Treatment cost comparisons
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-emerald-500">✓</span> Travel logistics assistance
+                            </li>
+                        </ul>
+                        <div className="space-y-4">
+                            <form className="space-y-4">
                                 <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-2">Your Name *</label>
-                                    <input
-                                        type="text"
-                                        required
-                                        value={formData.name}
-                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                        placeholder="John Smith"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-2">Email *</label>
+                                    <label htmlFor="patient-email" className="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
                                     <input
                                         type="email"
-                                        required
-                                        value={formData.email}
-                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                        placeholder="john@email.com"
+                                        id="patient-email"
+                                        placeholder="you@example.com"
+                                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                                     />
                                 </div>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-6 mb-6">
-                                <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-2">Phone (optional)</label>
-                                    <input
-                                        type="tel"
-                                        value={formData.phone}
-                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                        className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                        placeholder="+1 234 567 8900"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-2">Treatment Interest</label>
-                                    <select
-                                        value={formData.treatment}
-                                        onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
-                                        className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                    >
-                                        <option value="">Select treatment...</option>
-                                        <option value="stem-cell">Stem Cell Therapy</option>
-                                        <option value="nad">NAD+ IV Therapy</option>
-                                        <option value="exosomes">Exosome Therapy</option>
-                                        <option value="prp">PRP Therapy</option>
-                                        <option value="diagnostics">Full Body MRI / Diagnostics</option>
-                                        <option value="hormones">Hormone Optimization</option>
-                                        <option value="biohacking">Biohacking (Cryo, HBOT, etc.)</option>
-                                        <option value="other">Other / Not Sure</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="mb-6">
-                                <label className="block text-sm font-medium text-slate-700 mb-2">Preferred Destination</label>
-                                <select
-                                    value={formData.destination}
-                                    onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                >
-                                    <option value="">Open to suggestions...</option>
-                                    <option value="mexico">Mexico (Tijuana, Cancun)</option>
-                                    <option value="colombia">Colombia (Medellin)</option>
-                                    <option value="thailand">Thailand (Bangkok)</option>
-                                    <option value="panama">Panama</option>
-                                    <option value="uae">Dubai, UAE</option>
-                                    <option value="usa">United States</option>
-                                    <option value="europe">Europe</option>
-                                    <option value="asia">Asia (Singapore, Korea)</option>
-                                </select>
-                            </div>
-
-                            <div className="mb-6">
-                                <label className="block text-sm font-medium text-slate-700 mb-2">Tell us about your goals</label>
-                                <textarea
-                                    rows={4}
-                                    value={formData.message}
-                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                    placeholder="What condition are you looking to address? Any specific questions?"
-                                />
-                            </div>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-4 rounded-xl font-semibold transition flex items-center justify-center gap-2"
-                            >
-                                Submit Inquiry <ArrowRight className="w-4 h-4" />
-                            </button>
-
-                            <p className="text-xs text-slate-400 mt-4 text-center">
-                                By submitting, you agree to receive communications from LongevityIndex and our partner clinics.
+                                <button className="w-full bg-emerald-600 text-white font-semibold py-3 rounded-lg hover:bg-emerald-700 transition flex items-center justify-center gap-2">
+                                    Get Help Finding a Clinic <ArrowRight className="w-4 h-4" />
+                                </button>
+                            </form>
+                            <p className="text-xs text-slate-400 text-center">
+                                By submitting, you agree to our privacy policy.
                             </p>
-                        </form>
+                        </div>
                     </div>
+
+                    {/* For Clinics */}
+                    <div className="bg-white border border-slate-200 rounded-2xl p-8 hover:border-blue-300 transition shadow-sm">
+                        <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                            <Building2 className="w-8 h-8 text-blue-600" />
+                        </div>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-4">For Clinics</h2>
+                        <p className="text-slate-600 mb-6">
+                            Operate a longevity or regenerative medicine center? Join our global directory to reach qualified international patients.
+                        </p>
+                        <ul className="space-y-3 mb-8 text-slate-600">
+                            <li className="flex items-center gap-2">
+                                <span className="text-blue-500">✓</span> Verified directory listing
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-blue-500">✓</span> High-intent patient leads
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-blue-500">✓</span> Brand visibility globally
+                            </li>
+                        </ul>
+                        <div className="space-y-4">
+                            <form className="space-y-4">
+                                <div>
+                                    <label htmlFor="clinic-email" className="block text-sm font-medium text-slate-700 mb-1">Work Email</label>
+                                    <input
+                                        type="email"
+                                        id="clinic-email"
+                                        placeholder="doctor@clinic.com"
+                                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    />
+                                </div>
+                                <button className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2">
+                                    List Your Clinic <ArrowRight className="w-4 h-4" />
+                                </button>
+                            </form>
+                            <p className="text-xs text-slate-400 text-center">
+                                Partner inquiries only.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="mt-16 text-center">
+                    <p className="text-slate-600 mb-4">
+                        Have a general question? Email us directly.
+                    </p>
+                    <a
+                        href="mailto:hello@longevityindex.com"
+                        className="inline-flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-600 transition"
+                    >
+                        <Mail className="w-5 h-5" />
+                        hello@longevityindex.com
+                    </a>
                 </div>
             </section>
         </div>

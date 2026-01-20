@@ -94,9 +94,20 @@ export default async function TreatmentInCityPage({ params }: Props) {
         .neq('id', treatment.id)
         .limit(4);
 
-    // Parse benefits and risks
-    const benefits = treatment.benefits ? JSON.parse(treatment.benefits) : [];
-    const risks = treatment.risks ? JSON.parse(treatment.risks) : [];
+    // Parse benefits and risks safely
+    const parseList = (data: any) => {
+        if (!data) return [];
+        if (Array.isArray(data)) return data;
+        try {
+            const parsed = JSON.parse(data);
+            return Array.isArray(parsed) ? parsed : [data];
+        } catch {
+            return [data];
+        }
+    };
+
+    const benefits = parseList(treatment.benefits);
+    const risks = parseList(treatment.risks);
 
     // Generate FAQ items from benefits and risks
     const faqItems = [
