@@ -15,15 +15,39 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const { data: treatment } = await supabase
         .from('treatments')
-        .select('name, short_description')
+        .select('name, short_description, full_description')
         .eq('slug', slug)
         .single();
 
     if (!treatment) return { title: 'Treatment Not Found' };
 
+    const currentYear = new Date().getFullYear();
+    const title = `${treatment.name}: Benefits, Cost & Top Clinics (${currentYear}) | LongevityIndex`;
+    const description = treatment.short_description?.substring(0, 160) ||
+        `Discover ${treatment.name}: A complete guide to benefits, costs, and verified clinics. Book your consultation for ${currentYear}.`;
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": treatment.name,
+        "description": description,
+        "bodyLocation": "Whole body",
+        "procedureType": "https://schema.org/TherapeuticProcedure",
+        "status": "https://schema.org/Experimental",
+        "howPerformed": treatment.full_description ? "Consultation followed by customized protocol application." : undefined,
+    };
+
     return {
-        title: `${treatment.name} - Complete Guide | LongevityIndex`,
-        description: treatment.short_description,
+        title: title,
+        description: description,
+        openGraph: {
+            title: title,
+            description: description,
+            type: 'article',
+        },
+        other: {
+            'script:ld+json': JSON.stringify(jsonLd),
+        },
     };
 }
 
@@ -91,6 +115,18 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
     return (
         <div className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "MedicalProcedure",
+                        "name": treatment.name,
+                        "description": treatment.short_description,
+                        "howPerformed": treatment.full_description ? `See full guide: https://longevityindex.com/treatments/${category.slug}/${treatment.slug}` : undefined
+                    })
+                }}
+            />
             {/* Breadcrumb */}
             <div className="max-w-7xl mx-auto px-4 py-4">
                 <nav className="flex items-center text-sm text-slate-500 flex-wrap gap-1">

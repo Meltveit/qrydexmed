@@ -1,0 +1,1221 @@
+[
+  {
+    "id": "e15e44db-c8da-4377-90fe-0d7273498527",
+    "category_id": "7948fe7f-a92d-4997-8fa5-1d142bea80d0",
+    "name": "Biological Age Test (TruAge)",
+    "slug": "biological-age-test",
+    "short_description": "Advanced epigenetic clock analysis using DunedinPACE and other algorithms",
+    "full_description": "Biological age testing uses epigenetic markers, specifically DNA methylation patterns, to estimate how old your body is biologically versus your chronological age. Multiple validated algorithms exist, each measuring slightly different aspects of aging.\n\n**Leading Epigenetic Clocks:**\n1. **Horvath Clock**: First multi-tissue clock (2013), measures intrinsic aging\n2. **GrimAge**: Predicts mortality and disease risk, uses smoking/protein markers\n3. **DunedinPACE**: Measures pace of aging (how fast you're aging RIGHT NOW)\n4. **TruAge (Complete)**: Commercial test combining multiple metrics\n5. **PhenoAge**: Emphasizes functional health markers\n\n**What The Tests Reveal:**\n- Comparison of biological vs chronological age\n- Pace of aging (accelerated, normal, or decelerated)\n- Response to lifestyle interventions over time\n- Risk stratification for age-related diseases\n\n**How It Works:**\nSimple blood draw is sent to a lab that analyzes methylation at thousands of CpG sites across the genome. AI/machine learning algorithms trained on large datasets calculate age estimates.\n\n**Important Caveats:**\nResults can fluctuate based on recent illness, stress, or lifestyle factors. Different clocks can give different ages. The field is rapidly evolving - newer clocks may be more accurate than older ones.",
+    "avg_price_usd": 400,
+    "price_range_min": 250,
+    "price_range_max": 800,
+    "duration": "15 min blood draw",
+    "recovery_time": "None",
+    "fda_status": "Not regulated (diagnostic)",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24138928/",
+        "title": "Horvath Epigenetic Clock Original Paper",
+        "journal": "Genome Biology"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35032099/",
+        "title": "DunedinPACE Validation",
+        "journal": "eLife"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30669119/",
+        "title": "GrimAge and Mortality",
+        "journal": "Aging"
+      }
+    ],
+    "benefits": [
+      "Objective measure of biological aging",
+      "Can track intervention effectiveness over time",
+      "Multiple validated algorithms available",
+      "Simple blood test (15-min draw)",
+      "Emerging insurance and research acceptance",
+      "Motivating for lifestyle changes"
+    ],
+    "risks": [
+      "Results can fluctuate short-term",
+      "Different clocks give different ages",
+      "Not clinically validated for treatment decisions",
+      "May cause unnecessary anxiety",
+      "Optimal interpretation requires expertise",
+      "Field is still rapidly evolving"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "598dfdd0-e305-4787-9c84-5a8eb25b87f3",
+    "category_id": "081a3688-a492-4807-861f-ffcd2e4336a2",
+    "name": "CAR-T Cell Therapy",
+    "slug": "car-t-therapy",
+    "short_description": "Genetically engineered immune cells to target cancer and potentially aging cells",
+    "full_description": "Chimeric Antigen Receptor T-cell therapy involves extracting immune cells, engineering them to target specific proteins, and reinfusing them. FDA approved for certain cancers, researchers are exploring CAR-T targeting senescent (zombie) cells for anti-aging applications.",
+    "avg_price_usd": 400000,
+    "price_range_min": 300000,
+    "price_range_max": 500000,
+    "duration": "Multiple weeks process",
+    "recovery_time": "1-3 months recovery",
+    "fda_status": "FDA Approved (cancer)",
+    "research_links": [],
+    "benefits": [
+      "Revolutionary cancer treatment",
+      "Single infusion may provide lasting benefit",
+      "Potential for senescent cell targeting",
+      "Personalized to patient",
+      "Active research field"
+    ],
+    "risks": [
+      "Extremely expensive",
+      "Cytokine release syndrome risk",
+      "Neurological side effects possible",
+      "Currently only for cancer",
+      "Requires specialized centers"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "f769ae8d-021d-4b24-ae04-bbb1388ac576",
+    "category_id": "7948fe7f-a92d-4997-8fa5-1d142bea80d0",
+    "name": "Coronary Calcium Score",
+    "slug": "coronary-calcium-score",
+    "short_description": "CT scan measuring arterial plaque to assess heart attack risk",
+    "full_description": "A quick, non-invasive CT scan that detects and quantifies calcium deposits in coronary arteries. Higher scores correlate with increased cardiovascular disease risk. Used by longevity clinics as part of comprehensive heart health screening.",
+    "avg_price_usd": 150,
+    "price_range_min": 75,
+    "price_range_max": 300,
+    "duration": "10-15 minutes",
+    "recovery_time": "None",
+    "fda_status": "FDA Cleared",
+    "research_links": [],
+    "benefits": [
+      "Strong predictor of heart disease",
+      "Quick and painless",
+      "Low radiation dose",
+      "Helps guide treatment decisions",
+      "Can motivate lifestyle changes"
+    ],
+    "risks": [
+      "Does not show soft plaque",
+      "Some radiation exposure",
+      "May lead to unnecessary testing",
+      "Not for those with known heart disease",
+      "Insurance may not cover"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "f24d23a9-ca74-48bf-89d2-bfa4776c84dd",
+    "category_id": "0a14c5be-4cb5-44af-b710-225fe14151d2",
+    "name": "Cryotherapy",
+    "slug": "cryotherapy",
+    "short_description": "Whole-body cold exposure at -110°C for recovery, inflammation, and metabolism",
+    "full_description": "Whole-body cryotherapy (WBC) exposes the body to extreme cold (-110°C to -140°C / -166°F to -220°F) for 2-3 minutes in a specialized chamber. The cold triggers a systemic stress response that activates beneficial biological pathways.\n\n**Mechanisms of Action:**\n1. **Norepinephrine Release**: Cold increases norepinephrine 200-300%, improving focus and mood\n2. **Brown Fat Activation**: Stimulates metabolically active brown adipose tissue\n3. **Anti-Inflammatory**: Reduces inflammatory cytokines (IL-6, TNF-α)\n4. **Endorphin Release**: Natural pain relief and mood enhancement\n5. **Vasoconstriction/Vasodilation**: Improves circulation when warming up\n\n**Types of Cryotherapy:**\n- **Whole Body Chambers**: Head exposed or enclosed, uses liquid nitrogen cooling\n- **Cryo Chambers**: Walk-in rooms for -85°C to -120°C exposure\n- **Localized Cryo**: Targeted treatment for specific injuries\n- **Cold Plunges**: Ice baths at 0-10°C, longer exposure (2-15 min)\n\n**Applications:**\nOriginally developed in Japan (1978) for rheumatoid arthritis. Now popular with professional athletes for recovery, biohackers for hormesis and fat loss, and patients with chronic pain or inflammation.\n\nResearch from Poland, Germany, and Finland documents benefits for inflammation, depression, and recovery. The practice is well-established in European sports medicine.",
+    "avg_price_usd": 75,
+    "price_range_min": 40,
+    "price_range_max": 150,
+    "duration": "3 minutes",
+    "recovery_time": "None",
+    "fda_status": "N/A",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18157122/",
+        "title": "WBC and Norepinephrine",
+        "journal": "European J Appl Physiol"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28420250/",
+        "title": "Cryotherapy for Athletic Recovery",
+        "journal": "Int J Sports Physiol Perform"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18034595/",
+        "title": "WBC for Depression and Anxiety",
+        "journal": "Arch Immunol Ther Exp"
+      }
+    ],
+    "benefits": [
+      "Increases norepinephrine 200-300%",
+      "Reduces muscle soreness and inflammation",
+      "May boost metabolism via brown fat",
+      "Improves mood and focus",
+      "Quick 3-minute sessions",
+      "Well-researched in European literature"
+    ],
+    "risks": [
+      "Frostbite if not done properly (rare)",
+      "Brief discomfort during exposure",
+      "Not for those with cold sensitivity or Raynauds",
+      "Effects require regular sessions",
+      "Quality varies between facilities",
+      "Limited US regulation"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "60b015bc-c424-4e1a-94c7-710d93ac7521",
+    "category_id": "7948fe7f-a92d-4997-8fa5-1d142bea80d0",
+    "name": "DEXA Body Composition Scan",
+    "slug": "dexa-scan",
+    "short_description": "Gold-standard measurement of body fat, muscle mass, and bone density",
+    "full_description": "Dual-Energy X-ray Absorptiometry (DEXA) is considered the gold standard for measuring body composition. It uses two low-dose X-ray beams to differentiate between bone mineral, lean tissue, and fat tissue.\n\n**What DEXA Measures:**\n1. **Body Fat Percentage**: Total and regional distribution\n2. **Visceral Fat**: The dangerous fat around organs (key health marker)\n3. **Lean Mass**: Muscle tissue in each limb and trunk\n4. **Bone Mineral Density**: Osteoporosis screening\n5. **Asymmetries**: Left/right imbalances in muscle or fat\n\n**Why It Matters for Longevity:**\n- Visceral fat is strongly correlated with metabolic disease and mortality\n- Muscle mass (sarcopenia) predicts functional aging and frailty\n- Bone density identifies osteoporosis risk\n- Serial scans track response to diet, exercise, and treatments\n\n**Procedure:**\nQuick 10-15 minute scan. Low radiation exposure (1/10th of chest X-ray). Available at many imaging centers, university athletic departments, and longevity clinics.",
+    "avg_price_usd": 150,
+    "price_range_min": 75,
+    "price_range_max": 300,
+    "duration": "10-15 minutes",
+    "recovery_time": "None",
+    "fda_status": "FDA Cleared",
+    "research_links": [],
+    "benefits": [
+      "Gold standard for body composition",
+      "Measures visceral fat (key health metric)",
+      "Tracks muscle mass changes over time",
+      "Identifies bone density issues early",
+      "Quick and painless procedure",
+      "Low radiation exposure"
+    ],
+    "risks": [
+      "Small radiation exposure",
+      "May not be covered by insurance",
+      "Results can fluctuate with hydration",
+      "Requires lying still",
+      "Some size/weight limitations",
+      "Interpretation requires expertise"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T11:35:34.7621+00:00",
+    "updated_at": "2026-01-20T11:35:34.7621+00:00"
+  },
+  {
+    "id": "c6da611d-f420-425e-ba5f-033f8e2af5b4",
+    "category_id": "7948fe7f-a92d-4997-8fa5-1d142bea80d0",
+    "name": "Epigenetic Age Testing",
+    "slug": "epigenetic-age-testing",
+    "short_description": "DNA methylation analysis to determine biological age vs chronological age",
+    "full_description": null,
+    "avg_price_usd": 500,
+    "price_range_min": 300,
+    "price_range_max": 1000,
+    "duration": "15 minutes (blood draw)",
+    "recovery_time": "None",
+    "fda_status": "N/A",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "f2754e9a-22f8-4a0c-bf58-def6eb6fa96b",
+    "category_id": "081a3688-a492-4807-861f-ffcd2e4336a2",
+    "name": "Exosome Therapy",
+    "slug": "exosome-therapy",
+    "short_description": "Nano-sized vesicles that deliver regenerative signals to target cells",
+    "full_description": "Exosomes are nano-sized extracellular vesicles (30-150 nanometers) secreted by virtually all cell types. They function as intercellular messengers, carrying cargo including proteins, lipids, mRNA, and microRNA between cells. Stem cell-derived exosomes contain the regenerative signaling molecules without the complexity of live cells.\n\n**Key Advantages Over Stem Cells:**\n1. **No Live Cell Rejection Risk**: Acellular therapy avoids immune rejection concerns\n2. **Smaller Size**: Can penetrate tissue barriers, including potentially the blood-brain barrier\n3. **Standardized Dosing**: Particle counts can be precisely measured (typically 5-50 billion particles per dose)\n4. **Easier Storage**: Can be frozen without losing efficacy, unlike some cell preparations\n\nClinical applications include skin rejuvenation, hair restoration, orthopedic injuries, neurological conditions, and systemic anti-aging. Routes of administration include IV infusion, direct injection, and topical application (for skin/hair).\n\nThe field is rapidly evolving with ongoing research at institutions like Mayo Clinic, Stanford, and numerous international centers. However, regulatory status remains unclear in the US, leading many patients to seek treatment abroad.",
+    "avg_price_usd": 8000,
+    "price_range_min": 3000,
+    "price_range_max": 20000,
+    "duration": "30-60 minutes",
+    "recovery_time": "1-3 days",
+    "fda_status": "Investigational",
+    "research_links": [
+      {
+        "url": "https://www.nature.com/articles/s41392-020-0205-z",
+        "title": "Exosomes in Regenerative Medicine",
+        "journal": "Nature Signal Transduction"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31395745/",
+        "title": "MSC Exosomes for Tissue Repair",
+        "journal": "Stem Cell Research & Therapy"
+      },
+      {
+        "url": "https://www.frontiersin.org/articles/10.3389/fbioe.2021.653935",
+        "title": "Exosome Clinical Applications",
+        "journal": "Frontiers in Bioengineering"
+      }
+    ],
+    "benefits": [
+      "No live cell rejection risk",
+      "Smaller particles for better tissue penetration",
+      "Can be precisely dosed by particle count",
+      "Stable storage (frozen)",
+      "May cross blood-brain barrier",
+      "Combines well with other treatments"
+    ],
+    "risks": [
+      "Limited long-term human data",
+      "Quality varies dramatically between manufacturers",
+      "Not FDA regulated (gray market in US)",
+      "Expensive ($3,000-20,000)",
+      "Mechanism not fully understood yet",
+      "Some products may contain minimal active particles"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "bc0f2d8d-116d-4653-8936-975d90f7d4c3",
+    "category_id": "0a14c5be-4cb5-44af-b710-225fe14151d2",
+    "name": "Float Tank (Sensory Deprivation)",
+    "slug": "float-tank",
+    "short_description": "Magnesium-rich float therapy for deep relaxation and recovery",
+    "full_description": "Float tanks contain 1000+ lbs of Epsom salt in body-temperature water, creating effortless floating. Complete sensory deprivation promotes deep relaxation, meditation, and magnesium absorption. Used for stress relief, creativity, and athletic recovery.",
+    "avg_price_usd": 80,
+    "price_range_min": 50,
+    "price_range_max": 150,
+    "duration": "60-90 minutes",
+    "recovery_time": "None",
+    "fda_status": "Not regulated",
+    "research_links": [],
+    "benefits": [
+      "Deep relaxation state",
+      "Magnesium absorption through skin",
+      "Reduces stress hormones",
+      "Enhances creativity",
+      "Popular with athletes for recovery"
+    ],
+    "risks": [
+      "Can feel claustrophobic",
+      "Not for those with skin conditions",
+      "Ear plugs recommended",
+      "May be boring for some",
+      "Hygiene depends on facility"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "6162f061-eafb-4419-8734-bc1525525bca",
+    "category_id": "7948fe7f-a92d-4997-8fa5-1d142bea80d0",
+    "name": "Full Body MRI",
+    "slug": "full-body-mri",
+    "short_description": "Comprehensive imaging scan for early cancer detection and organ health assessment",
+    "full_description": "Whole-body MRI (Magnetic Resonance Imaging) uses powerful magnets and radio waves to create detailed images of organs and tissues throughout the body WITHOUT ionizing radiation. Unlike CT scans or X-rays, MRI poses no cancer risk from the imaging itself.\n\n**What It Screens For:**\n- **Cancer Detection**: Tumors as small as 1-3mm in brain, spine, abdomen, pelvis\n- **Cardiovascular**: Aortic aneurysms, structural heart abnormalities\n- **Neurological**: Brain tumors, white matter lesions, stroke evidence\n- **Musculoskeletal**: Spine conditions, joint abnormalities\n- **Organ Health**: Liver, kidney, pancreas, spleen abnormalities\n\n**Leading Providers:**\n- **Prenuvo**: 60+ minute scan, AI-enhanced reading, ~$2,500\n- **Ezra**: Full-body protocol, oncologist review, ~$1,950\n- **Fountain Life**: Part of comprehensive APEX program\n\n**Considerations:**\nThe main controversy is the high rate of incidental findings (findings unrelated to your reason for scanning). Studies show 40-80% of scans find something, leading to additional imaging, biopsies, or anxiety. However, proponents argue early cancer detection saves lives, citing cases of Stage 1 cancers found in otherwise healthy individuals.\n\nMRI screening is increasingly recommended by longevity physicians for patients over 40, especially those with family history of cancer.",
+    "avg_price_usd": 2500,
+    "price_range_min": 1500,
+    "price_range_max": 5000,
+    "duration": "60-90 minutes",
+    "recovery_time": "None",
+    "fda_status": "FDA Cleared",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34506156/",
+        "title": "Whole Body MRI Cancer Screening Value",
+        "journal": "Radiology"
+      },
+      {
+        "url": "https://www.prenuvo.com/research",
+        "title": "Prenuvo Clinical Outcomes",
+        "journal": "Prenuvo"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28945192/",
+        "title": "Incidental Findings in Whole Body MRI",
+        "journal": "European Radiology"
+      }
+    ],
+    "benefits": [
+      "No radiation exposure (unlike CT)",
+      "Can detect cancers at earliest stages",
+      "Comprehensive organ assessment in one scan",
+      "Incidental finding of aneurysms has saved lives",
+      "Non-invasive and painless",
+      "AI enhancement improving detection rates"
+    ],
+    "risks": [
+      "High false positive rate leading to anxiety",
+      "May trigger unnecessary biopsies/tests",
+      "Expensive ($1,500-5,000) and not covered by insurance",
+      "Claustrophobia may prevent completion",
+      "60-90 minute scan time",
+      "Incidental findings may be psychologically distressing"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "11b7c407-454f-4288-ad57-f9abcbad1650",
+    "category_id": "0a5c27fb-dc0a-4a16-bdd8-518a6a915a09",
+    "name": "GLP-1 Agonists (Semaglutide)",
+    "slug": "semaglutide",
+    "short_description": "Weight loss and metabolic health medication with longevity implications",
+    "full_description": "Semaglutide is a glucagon-like peptide-1 (GLP-1) receptor agonist originally developed for type 2 diabetes (Ozempic 0.5-2mg) and later approved for weight loss (Wegovy 2.4mg). It has become one of the most impactful medications for metabolic health with implications for longevity.\n\n**Mechanisms of Action:**\n1. **Appetite Suppression**: Acts on brain hunger centers to reduce food intake\n2. **Delayed Gastric Emptying**: Slows digestion, increasing fullness\n3. **Insulin Sensitivity**: Improves blood sugar control\n4. **Cardiovascular Protection**: Reduces inflammation and plaque formation\n\n**Clinical Evidence:**\n- **STEP Trials**: 15-20% body weight loss sustained over 68 weeks\n- **SELECT Trial**: 20% reduction in heart attacks, strokes, and cardiovascular death\n- **Diabetes Outcomes**: Superior HbA1c reduction vs other diabetes medications\n\n**Longevity Implications:**\nWeight loss through caloric restriction activates similar pathways to proven longevity interventions. The cardiovascular protection may independently extend lifespan. Ongoing trials are investigating effects on fatty liver disease, sleep apnea, and kidney disease.\n\n**Administration:**\nWeekly subcutaneous injection, titrated from 0.25mg up to 2.4mg over 16-20 weeks to manage side effects. Compounded versions available at lower cost but with quality concerns.",
+    "avg_price_usd": 500,
+    "price_range_min": 300,
+    "price_range_max": 1500,
+    "duration": "Weekly injection ongoing",
+    "recovery_time": "None",
+    "fda_status": "FDA Approved",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33567185/",
+        "title": "STEP 1 Weight Loss Trial",
+        "journal": "NEJM"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37952131/",
+        "title": "SELECT Cardiovascular Outcomes",
+        "journal": "NEJM"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36702138/",
+        "title": "GLP-1 and Longevity Review",
+        "journal": "Diabetes Care"
+      }
+    ],
+    "benefits": [
+      "FDA approved with extensive safety data",
+      "15-20% sustained weight loss documented",
+      "20% reduction in cardiovascular events",
+      "Improves multiple metabolic markers",
+      "Once-weekly dosing",
+      "May have longevity benefits via caloric restriction pathways"
+    ],
+    "risks": [
+      "Nausea, vomiting common especially during titration",
+      "Muscle loss if not combined with exercise/protein",
+      "Expensive ($900-1500/month) without insurance",
+      "Must continue for weight maintenance",
+      "Rare pancreatitis risk",
+      "Thyroid tumor warning (from rodent studies)"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "619477b2-91ee-4f4e-bf29-68dd7630d5cd",
+    "category_id": "8d7efa4c-0a26-4503-875e-a6d870a7fe8a",
+    "name": "Glutathione IV",
+    "slug": "glutathione-iv",
+    "short_description": "Master antioxidant infusion for detoxification and skin brightening",
+    "full_description": "Glutathione is the body's primary antioxidant, crucial for detoxification and immune function. IV delivery bypasses digestive breakdown, providing direct cellular delivery. Popular for skin lightening, liver support, and general wellness.",
+    "avg_price_usd": 200,
+    "price_range_min": 100,
+    "price_range_max": 400,
+    "duration": "20-30 minutes",
+    "recovery_time": "None",
+    "fda_status": "Not FDA Approved",
+    "research_links": [],
+    "benefits": [
+      "Powerful antioxidant support",
+      "Supports liver detoxification",
+      "Popular for skin brightening",
+      "Quick procedure",
+      "Can be combined with other IVs"
+    ],
+    "risks": [
+      "Skin lightening effects controversial",
+      "Limited absorption data",
+      "Effects may be temporary",
+      "Not FDA approved",
+      "Allergic reactions rare but possible"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "c5d58ba4-f436-42f1-8eb4-97e6e1bf9dd5",
+    "category_id": "0a5c27fb-dc0a-4a16-bdd8-518a6a915a09",
+    "name": "Growth Hormone Therapy",
+    "slug": "growth-hormone-therapy",
+    "short_description": "HGH optimization for body composition, energy, and anti-aging benefits",
+    "full_description": null,
+    "avg_price_usd": 1000,
+    "price_range_min": 500,
+    "price_range_max": 2000,
+    "duration": "Ongoing (daily)",
+    "recovery_time": "None",
+    "fda_status": "Prescription Only",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "87a65887-24fb-4c04-bd6d-d0931c7be5dc",
+    "category_id": "0a14c5be-4cb5-44af-b710-225fe14151d2",
+    "name": "HBOT Hyperbaric Oxygen",
+    "slug": "hyperbaric-oxygen-therapy",
+    "short_description": "Breathing pure oxygen in a pressurized chamber to enhance healing and brain function",
+    "full_description": "Hyperbaric Oxygen Therapy (HBOT) involves breathing 100% oxygen in a pressurized chamber, typically at 1.5-3.0 atmospheres absolute (ATA). This increases blood oxygen levels 10-15x normal, saturating tissues and activating beneficial biological responses.\n\n**FDA-Approved Indications (14 conditions):**\n- Decompression sickness (the bends)\n- Carbon monoxide poisoning\n- Diabetic foot ulcers and wound healing\n- Severe anemia\n- Gas gangrene and necrotizing fasciitis\n- Radiation injury\n\n**Emerging Research Applications:**\n- **Brain Health**: Israeli studies show HBOT may reverse cognitive decline in aging and post-concussion\n- **Stem Cell Mobilization**: Increases circulating stem cells 8-fold after 20 sessions\n- **Inflammation Reduction**: Modulates inflammatory cytokines\n- **Telomere Lengthening**: One study showed 20% increase in telomere length\n\n**Protocol Details:**\nSessions typically last 60-90 minutes at pressures of 1.5-2.4 ATA. Anti-aging protocols often involve 40-60 sessions over 8-12 weeks. Mild HBOT (1.3 ATA) is available in soft chambers but provides less benefit than hard chambers.\n\nHBOT is one of the most well-researched physical biohacking modalities with over 50 years of clinical use.",
+    "avg_price_usd": 250,
+    "price_range_min": 100,
+    "price_range_max": 500,
+    "duration": "60-90 minutes",
+    "recovery_time": "None",
+    "fda_status": "FDA Cleared",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33206062/",
+        "title": "HBOT for Cognitive Function in Aging",
+        "journal": "Aging (Albany NY)"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33206062/",
+        "title": "HBOT and Telomere Length",
+        "journal": "Aging (Albany NY)"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16728408/",
+        "title": "HBOT Stem Cell Mobilization",
+        "journal": "Am J Physiol Heart Circ Physiol"
+      },
+      {
+        "url": "https://www.fda.gov/consumers/consumer-updates/hyperbaric-oxygen-therapy-dont-be-misled",
+        "title": "FDA HBOT Indications",
+        "journal": "FDA"
+      }
+    ],
+    "benefits": [
+      "FDA approved for 14 medical conditions",
+      "Strong research for wound healing",
+      "Israeli studies show cognitive benefits",
+      "Mobilizes stem cells from bone marrow",
+      "One study showed telomere lengthening",
+      "50+ years of clinical safety data"
+    ],
+    "risks": [
+      "Ear and sinus pressure discomfort",
+      "Temporary nearsightedness",
+      "Rare oxygen toxicity at high pressures",
+      "Claustrophobia in chamber",
+      "Time commitment (60-90 min sessions)",
+      "Off-label longevity uses not FDA approved"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "698d789c-c3c2-4dee-80dc-816efee4d122",
+    "category_id": "0a5c27fb-dc0a-4a16-bdd8-518a6a915a09",
+    "name": "HRT Hormone Replacement",
+    "slug": "hormone-replacement-therapy",
+    "short_description": "Bioidentical hormone therapy for women during perimenopause and menopause",
+    "full_description": null,
+    "avg_price_usd": 250,
+    "price_range_min": 150,
+    "price_range_max": 500,
+    "duration": "Ongoing",
+    "recovery_time": "None",
+    "fda_status": "FDA Approved",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "6262e2cb-79b5-4cb1-a526-a879a539fa6a",
+    "category_id": "0a14c5be-4cb5-44af-b710-225fe14151d2",
+    "name": "Infrared Sauna",
+    "slug": "infrared-sauna",
+    "short_description": "Deep-penetrating heat therapy for detoxification and cardiovascular benefits",
+    "full_description": "Infrared saunas use light wavelengths to heat the body directly, operating at lower temperatures than traditional saunas (120-140°F). Research shows benefits for cardiovascular health, pain relief, and detoxification through sweating.",
+    "avg_price_usd": 50,
+    "price_range_min": 20,
+    "price_range_max": 100,
+    "duration": "30-45 minutes",
+    "recovery_time": "None",
+    "fda_status": "Not regulated",
+    "research_links": [],
+    "benefits": [
+      "Cardiovascular benefits documented",
+      "Improved circulation",
+      "Detoxification through sweat",
+      "Pain and muscle relief",
+      "Relaxation and stress reduction"
+    ],
+    "risks": [
+      "Dehydration risk",
+      "Not for those with heart conditions",
+      "Can be hot for sensitive individuals",
+      "Quality of units varies",
+      "Should drink plenty of water"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "28220e4d-4f7f-4780-9528-b1d921434b3f",
+    "category_id": "8d7efa4c-0a26-4503-875e-a6d870a7fe8a",
+    "name": "IV Nutrient Therapy",
+    "slug": "iv-nutrient-therapy",
+    "short_description": "Customized vitamin and mineral infusions for optimal cellular function",
+    "full_description": null,
+    "avg_price_usd": 300,
+    "price_range_min": 150,
+    "price_range_max": 500,
+    "duration": "30-60 minutes",
+    "recovery_time": "None",
+    "fda_status": "N/A",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "be1a25c2-4599-41a0-9742-38dd6ed60034",
+    "category_id": "8d7efa4c-0a26-4503-875e-a6d870a7fe8a",
+    "name": "Metformin",
+    "slug": "metformin",
+    "short_description": "Diabetes medication being studied for longevity via TAME trial",
+    "full_description": "Metformin is a first-line type 2 diabetes medication that has been used safely for 60+ years. Observational studies noticed that diabetics on metformin lived longer than non-diabetics, sparking interest in its longevity potential.\n\n**Proposed Longevity Mechanisms:**\n1. **AMPK Activation**: Mimics some effects of caloric restriction\n2. **Reduced IGF-1**: Lowers growth signaling associated with aging\n3. **Gut Microbiome Effects**: May beneficially alter gut bacteria\n4. **Anti-Inflammatory**: Reduces chronic low-grade inflammation\n\n**TAME Trial (Targeting Aging with Metformin):**\nThis landmark $75 million NIH-funded trial will test metformin in 3,000 elderly non-diabetics over 5 years. It aims to establish aging as a treatable condition.\n\n**Current Status:**\nMany longevity physicians already prescribe metformin off-label to non-diabetics at 500-1500mg daily. It is extremely affordable ($4-10/month generic). However, it may blunt exercise benefits, so athletic individuals often skip doses on training days.",
+    "avg_price_usd": 15,
+    "price_range_min": 4,
+    "price_range_max": 50,
+    "duration": "Daily dosing (oral)",
+    "recovery_time": "None",
+    "fda_status": "FDA Approved (diabetes)",
+    "research_links": [],
+    "benefits": [
+      "60+ years of safety data",
+      "Extremely affordable ($4-10/month)",
+      "Observational data suggests longevity benefit",
+      "TAME trial will provide definitive evidence",
+      "Well-tolerated by most people",
+      "Easy to obtain with prescription"
+    ],
+    "risks": [
+      "GI side effects common initially",
+      "May reduce exercise benefits",
+      "Not proven for longevity in humans yet",
+      "B12 depletion with long-term use",
+      "Not for people with kidney disease",
+      "Some debate about net benefit in non-diabetics"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T11:35:34.7621+00:00",
+    "updated_at": "2026-01-20T11:35:34.7621+00:00"
+  },
+  {
+    "id": "a4dd1117-d966-4731-9eb5-2a855a4f8c75",
+    "category_id": "8d7efa4c-0a26-4503-875e-a6d870a7fe8a",
+    "name": "Methylene Blue",
+    "slug": "methylene-blue",
+    "short_description": "Mitochondrial enhancer with potential cognitive and anti-aging benefits",
+    "full_description": "Methylene blue is a synthetic dye that acts as an alternative electron carrier in mitochondria. Early research suggests benefits for cognitive function, mood, and mitochondrial health. Used in low doses orally or intravenously.",
+    "avg_price_usd": 150,
+    "price_range_min": 50,
+    "price_range_max": 300,
+    "duration": "Oral ongoing or 30min IV",
+    "recovery_time": "None",
+    "fda_status": "FDA Approved (specific uses)",
+    "research_links": [],
+    "benefits": [
+      "Enhances mitochondrial function",
+      "Crosses blood-brain barrier",
+      "Potential cognitive benefits",
+      "Strong research base",
+      "Affordable"
+    ],
+    "risks": [
+      "Turns urine blue temporarily",
+      "Interacts with SSRIs",
+      "Can cause nausea",
+      "Optimal dosing unclear",
+      "Quality varies between sources"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "8c8752ad-2b9a-411e-8ef4-bcfb6b0431aa",
+    "category_id": "7948fe7f-a92d-4997-8fa5-1d142bea80d0",
+    "name": "Microbiome Analysis",
+    "slug": "microbiome-analysis",
+    "short_description": "Advanced gut bacteria profiling to optimize digestion and immune function",
+    "full_description": null,
+    "avg_price_usd": 400,
+    "price_range_min": 200,
+    "price_range_max": 800,
+    "duration": "15 minutes",
+    "recovery_time": "None",
+    "fda_status": "N/A",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "027ea43d-8e56-4bb5-9ebe-51d0fc6a5459",
+    "category_id": "7948fe7f-a92d-4997-8fa5-1d142bea80d0",
+    "name": "Multi-Omics Panel",
+    "slug": "multi-omics-panel",
+    "short_description": "Complete analysis of genomics, proteomics, and metabolomics for personalized health insights",
+    "full_description": null,
+    "avg_price_usd": 5000,
+    "price_range_min": 2000,
+    "price_range_max": 10000,
+    "duration": "1 hour (sample collection)",
+    "recovery_time": "None",
+    "fda_status": "N/A",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "5320f1f0-168e-4009-92d3-e081f7e44499",
+    "category_id": "8d7efa4c-0a26-4503-875e-a6d870a7fe8a",
+    "name": "NAD+ IV Therapy",
+    "slug": "nad-iv-therapy",
+    "short_description": "Intravenous infusion of NAD+ to boost cellular energy and slow aging",
+    "full_description": "Nicotinamide Adenine Dinucleotide (NAD+) is a coenzyme found in all living cells that plays a critical role in cellular energy production and DNA repair. It is essential for the function of sirtuins, a family of proteins involved in aging and longevity. NAD+ levels naturally decline by approximately 50% between ages 40-60.\n\n**Mechanisms of Action:**\n1. **Mitochondrial Function**: NAD+ is required for the electron transport chain, the primary source of cellular ATP (energy)\n2. **Sirtuin Activation**: SIRT1-7 require NAD+ as a cofactor for their deacetylase activity, which regulates metabolism and aging\n3. **DNA Repair**: PARP enzymes use NAD+ to repair DNA damage\n4. **Epigenetic Regulation**: Influences gene expression patterns associated with aging\n\nIV administration bypasses digestive breakdown (oral NAD+ has poor bioavailability) and delivers NAD+ directly to cells. Standard protocols range from 250mg to 1000mg per session, infused over 2-6 hours. Slower infusion rates minimize side effects like flushing, nausea, and chest tightness.\n\nResearch from Harvard, MIT, and Washington University has established NAD+ decline as a hallmark of aging. David Sinclair's lab demonstrated that NAD+ precursors (NMN, NR) extend healthspan in mice. Human clinical trials are ongoing.",
+    "avg_price_usd": 750,
+    "price_range_min": 300,
+    "price_range_max": 1500,
+    "duration": "2-4 hours",
+    "recovery_time": "None",
+    "fda_status": "N/A",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29514064/",
+        "title": "NAD+ and Aging: A Review",
+        "journal": "Cell Metabolism"
+      },
+      {
+        "url": "https://sinclair.hms.harvard.edu/research",
+        "title": "David Sinclair NAD+ Research",
+        "journal": "Harvard Medical School"
+      },
+      {
+        "url": "https://clinicaltrials.gov/search?cond=NAD",
+        "title": "NAD+ Boosters Clinical Trial",
+        "journal": "ClinicalTrials.gov"
+      }
+    ],
+    "benefits": [
+      "Increases cellular energy and reduces fatigue",
+      "Supports DNA repair mechanisms",
+      "Activates longevity-associated sirtuin pathways",
+      "May improve cognitive clarity and focus",
+      "Used successfully in addiction recovery protocols",
+      "Decades of research supporting NAD+ importance"
+    ],
+    "risks": [
+      "Flushing, nausea during infusion (usually manageable)",
+      "Chest tightness at high doses",
+      "Expensive ($300-1500 per session)",
+      "Effects may require regular maintenance",
+      "Limited human clinical trial data for anti-aging claims",
+      "Quality of NAD+ varies between compounding pharmacies"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "ee48a63f-0b73-4f8c-8937-3e75945966c0",
+    "category_id": "8d7efa4c-0a26-4503-875e-a6d870a7fe8a",
+    "name": "Ozone Therapy",
+    "slug": "ozone-therapy",
+    "short_description": "Medical ozone administration to enhance oxygen utilization and immune function",
+    "full_description": "Medical ozone therapy administers a mixture of ozone (O3) and oxygen to the body to enhance oxygen utilization, modulate immune function, and activate antioxidant systems. Ozone is a highly reactive molecule that triggers beneficial stress responses through controlled oxidation.\n\n**Administration Methods:**\n1. **Major Autohemotherapy (MAH)**: Blood drawn, mixed with ozone, reinfused\n2. **Rectal/Vaginal Insufflation**: Ozone gas introduced via mucosal membranes\n3. **Ozone Sauna**: Steam cabinet with ozone for skin absorption\n4. **10-Pass (High-Dose)**: Advanced MAH cycling blood 10 times\n5. **Direct Injection**: Into joints or tissues (prolozone therapy)\n\n**Mechanisms:**\n- Activates Nrf2 pathway (master antioxidant switch)\n- Increases 2,3-DPG for enhanced oxygen delivery\n- Modulates cytokines (reduces inflammation)\n- May have antimicrobial effects\n\n**Research Status:**\nWidely used in Germany, Cuba, Russia, and Italy with decades of clinical experience. Over 3,000 published papers. Not FDA approved in the US for any medical condition and cannot be legally administered IV in most states. Medical tourism destinations offer full protocols.\n\n**Conditions Treated (In Research/Clinical Practice):**\nChronic infections, wound healing, autoimmune modulation, cardiovascular support, and general wellness optimization.",
+    "avg_price_usd": 200,
+    "price_range_min": 100,
+    "price_range_max": 400,
+    "duration": "30-60 minutes",
+    "recovery_time": "None",
+    "fda_status": "Not FDA Approved",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27723543/",
+        "title": "Ozone Therapy Mechanisms Review",
+        "journal": "Medical Gas Research"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30417900/",
+        "title": "Ozone and Immune Modulation",
+        "journal": "Int Immunopharmacol"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27855264/",
+        "title": "Clinical Ozone Applications",
+        "journal": "J Nat Sci Biol Med"
+      }
+    ],
+    "benefits": [
+      "Activates antioxidant defenses (Nrf2)",
+      "Improves oxygen utilization in tissues",
+      "Decades of clinical use in Europe/Cuba",
+      "Multiple administration routes available",
+      "May support immune function",
+      "Used for chronic conditions where other treatments fail"
+    ],
+    "risks": [
+      "Not FDA approved in the United States",
+      "Potential lung irritation if inhaled",
+      "Requires trained practitioner",
+      "IV administration illegal in some US states",
+      "Quality of equipment/training varies",
+      "Limited standardization of protocols"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "4e5e619c-9915-4d71-a666-9f7b9cf957bd",
+    "category_id": "0a14c5be-4cb5-44af-b710-225fe14151d2",
+    "name": "PEMF Therapy",
+    "slug": "pemf-therapy",
+    "short_description": "Pulsed electromagnetic field therapy for pain relief and tissue regeneration",
+    "full_description": null,
+    "avg_price_usd": 150,
+    "price_range_min": 75,
+    "price_range_max": 300,
+    "duration": "30-60 minutes",
+    "recovery_time": "None",
+    "fda_status": "FDA Cleared",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "adf47f5d-aa8d-41b9-bbdc-ffa27632022f",
+    "category_id": "0a5c27fb-dc0a-4a16-bdd8-518a6a915a09",
+    "name": "Peptide Injections (BPC-157)",
+    "slug": "bpc-157",
+    "short_description": "Healing peptide for gut health, injury recovery, and tissue repair",
+    "full_description": "BPC-157 (Body Protection Compound-157) is a synthetic peptide consisting of 15 amino acids derived from a protein found in human gastric juice. First studied in the 1990s, it has shown remarkable healing properties in over 100 preclinical studies.\n\n**Mechanisms of Action:**\n1. **VEGF Upregulation**: Promotes blood vessel formation for tissue repair\n2. **Growth Hormone Receptor Interaction**: May enhance tissue healing pathways\n3. **Nitric Oxide Modulation**: Balances NO system for healing\n4. **Tendon Fibroblast Activation**: Accelerates tendon and ligament repair\n\n**Research-Documented Uses:**\n- Tendon and ligament injuries (most studied application)\n- Gut healing (IBD, leaky gut, ulcers)\n- Muscle tears and strains\n- Post-surgical recovery\n- Potential neuroprotective effects\n\n**Administration:**\nTypically 250-500mcg daily via subcutaneous injection near injury site or systemically. Oral forms (capsules) also available with purported gut-specific benefits. Treatment courses usually run 4-8 weeks.\n\nBPC-157 remains classified as a research chemical in the US and is not FDA approved. However, it has an excellent safety profile in animal studies with no reported toxicity at therapeutic doses. Many athletes and biohackers source it from research peptide suppliers.",
+    "avg_price_usd": 300,
+    "price_range_min": 150,
+    "price_range_max": 600,
+    "duration": "Daily injections for 4-8 weeks",
+    "recovery_time": "None",
+    "fda_status": "Not FDA Approved (research only)",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21030672/",
+        "title": "BPC-157 Tendon Healing",
+        "journal": "J Physiol Pharmacol"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32585465/",
+        "title": "BPC-157 Comprehensive Review",
+        "journal": "Current Pharm Des"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27847288/",
+        "title": "BPC-157 Mechanisms of Action",
+        "journal": "J Physiol Pharmacol"
+      }
+    ],
+    "benefits": [
+      "Over 100 preclinical studies support healing effects",
+      "Excellent safety profile in animal studies",
+      "Accelerates tendon and ligament healing",
+      "May help heal gut lining (leaky gut)",
+      "Can be self-administered",
+      "Relatively affordable ($150-400/month)"
+    ],
+    "risks": [
+      "Not FDA approved - research chemical status",
+      "Limited human clinical trial data",
+      "Quality varies between peptide suppliers",
+      "Injection site reactions possible",
+      "Long-term effects unknown",
+      "May affect growth hormone pathways"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "0b9faee4-74ea-4b7c-acc4-30ee5a6a29f0",
+    "category_id": "081a3688-a492-4807-861f-ffcd2e4336a2",
+    "name": "Peptide Therapy",
+    "slug": "peptide-therapy",
+    "short_description": "Targeted peptides like BPC-157 and GHK-Cu for healing and anti-aging",
+    "full_description": null,
+    "avg_price_usd": 500,
+    "price_range_min": 200,
+    "price_range_max": 2000,
+    "duration": "Ongoing",
+    "recovery_time": "None",
+    "fda_status": "Investigational",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "430a68d1-4c72-48b2-b1b4-24d481a7ebc1",
+    "category_id": "081a3688-a492-4807-861f-ffcd2e4336a2",
+    "name": "Plasmapheresis",
+    "slug": "plasmapheresis",
+    "short_description": "Blood plasma filtration to remove inflammatory proteins and rejuvenate the immune system",
+    "full_description": "Therapeutic plasma exchange (TPE) filters blood plasma and replaces it with donor plasma or albumin. Used medically for autoimmune conditions, it is now being explored for anti-aging. Young plasma studies have shown potential for cognitive and physical rejuvenation in animal models.",
+    "avg_price_usd": 3500,
+    "price_range_min": 2000,
+    "price_range_max": 8000,
+    "duration": "2-4 hours per session",
+    "recovery_time": "1 day",
+    "fda_status": "FDA Approved (medical uses)",
+    "research_links": [],
+    "benefits": [
+      "May reduce chronic inflammation",
+      "Removes harmful antibodies",
+      "Used for autoimmune conditions",
+      "Emerging anti-aging research",
+      "Can be done regularly"
+    ],
+    "risks": [
+      "Requires IV access",
+      "Risk of infection",
+      "Allergic reactions to plasma",
+      "Expensive ongoing treatment",
+      "Limited anti-aging evidence in humans"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T10:58:28.568605+00:00",
+    "updated_at": "2026-01-20T10:58:28.568605+00:00"
+  },
+  {
+    "id": "7e5d15fb-4566-41ba-af40-20b9ab06f51e",
+    "category_id": "081a3688-a492-4807-861f-ffcd2e4336a2",
+    "name": "PRP Therapy",
+    "slug": "prp-therapy",
+    "short_description": "Platelet-Rich Plasma injections using concentrated growth factors from your own blood",
+    "full_description": "Platelet-Rich Plasma (PRP) therapy concentrates platelets from the patient's own blood to 5-10x normal levels. Platelets contain growth factors including PDGF (Platelet-Derived Growth Factor), TGF-β (Transforming Growth Factor Beta), VEGF (Vascular Endothelial Growth Factor), and EGF (Epidermal Growth Factor) that accelerate tissue healing.\n\n**Preparation Process:**\n1. Blood draw (typically 30-60ml)\n2. Centrifugation to separate plasma from red blood cells\n3. Concentration of platelet-rich layer\n4. Injection into target tissue\n\n**FDA Status:** PRP is FDA-cleared for certain orthopedic and dental applications. Equipment is FDA 510(k) cleared, and since it uses the patient's own blood, it falls under \"same surgical procedure\" exemption for many uses.\n\n**Evidence-Based Applications:**\n- **Knee Osteoarthritis**: Multiple meta-analyses show benefit vs hyaluronic acid\n- **Tennis Elbow**: Superior to corticosteroid injections at 1-year follow-up\n- **Hair Loss**: Randomized trials showing increased hair density\n- **Facial Rejuvenation**: Collagen stimulation and skin quality improvement\n\nPRP is one of the most studied regenerative therapies with hundreds of clinical trials. Results depend heavily on preparation technique, platelet concentration, and activation method.",
+    "avg_price_usd": 1500,
+    "price_range_min": 500,
+    "price_range_max": 3000,
+    "duration": "1 hour",
+    "recovery_time": "1-3 days",
+    "fda_status": "FDA Cleared",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33140673/",
+        "title": "PRP for Knee Osteoarthritis Meta-Analysis",
+        "journal": "Am J Sports Med"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20068208/",
+        "title": "PRP vs Corticosteroids for Tennis Elbow",
+        "journal": "JAMA"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31286145/",
+        "title": "PRP for Hair Loss RCT",
+        "journal": "Dermatologic Surgery"
+      }
+    ],
+    "benefits": [
+      "Uses patient own blood (autologous, no rejection)",
+      "FDA cleared for certain applications",
+      "Hundreds of clinical trials support efficacy",
+      "Minimal side effects profile",
+      "Quick procedure (under 1 hour)",
+      "Can be repeated multiple times"
+    ],
+    "risks": [
+      "Results vary based on preparation technique",
+      "Pain at injection site for 1-3 days",
+      "May require multiple sessions",
+      "Not covered by most insurance",
+      "Less potent than stem cells for severe conditions",
+      "Standardization lacking between clinics"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "ef356a96-ac90-43c1-a4ac-2b5ab1ade6da",
+    "category_id": "8d7efa4c-0a26-4503-875e-a6d870a7fe8a",
+    "name": "Rapamycin (Sirolimus)",
+    "slug": "rapamycin",
+    "short_description": "mTOR inhibitor with proven longevity effects in animal studies, now being tested in humans",
+    "full_description": "Rapamycin (sirolimus) is an mTOR (mechanistic target of rapamycin) inhibitor originally developed as an immunosuppressant for organ transplant patients. It has become the most studied pharmacological longevity intervention after consistent lifespan extension across multiple species including mice (up to 25% increase).\n\n**Longevity Mechanisms:**\n1. **mTOR Inhibition**: Reduces cellular growth signaling, mimicking caloric restriction\n2. **Autophagy Activation**: Increases cellular cleanup of damaged proteins and organelles\n3. **Senescent Cell Reduction**: May decrease zombie cell accumulation\n4. **Immune Modulation**: Paradoxically may improve immune function at low doses\n\n**Current Human Research:**\nThe PEARL trial and others are investigating weekly low-dose rapamycin (5-6mg) for longevity. Matt Kaeberlein (formerly U of Washington) and others are leading this research. Dog aging studies (Dog Aging Project) have shown cardiac benefits.\n\n**Sourcing:**\nRapamycin requires a prescription. Longevity clinics may prescribe off-label. Compounding pharmacies provide lower-cost options.",
+    "avg_price_usd": 150,
+    "price_range_min": 50,
+    "price_range_max": 300,
+    "duration": "Weekly dosing (oral)",
+    "recovery_time": "None",
+    "fda_status": "FDA Approved (transplant)",
+    "research_links": [],
+    "benefits": [
+      "Most-studied longevity drug in research",
+      "Up to 25% lifespan extension in mice",
+      "Activates beneficial autophagy",
+      "Weekly dosing is convenient",
+      "40+ years of safety data in transplant medicine",
+      "Active human longevity trials ongoing"
+    ],
+    "risks": [
+      "Immunosuppressive effects (though less at low doses)",
+      "Mouth sores common side effect",
+      "Metabolic effects (lipids, glucose)",
+      "Long-term longevity effects in humans unknown",
+      "Requires physician prescription and monitoring",
+      "Not FDA approved for longevity"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T11:35:34.7621+00:00",
+    "updated_at": "2026-01-20T11:35:34.7621+00:00"
+  },
+  {
+    "id": "f3db3406-69a9-4920-bdc9-96f3be637acf",
+    "category_id": "0a14c5be-4cb5-44af-b710-225fe14151d2",
+    "name": "Red Light Therapy",
+    "slug": "red-light-therapy",
+    "short_description": "Photobiomodulation using red and near-infrared light for cellular repair",
+    "full_description": "Photobiomodulation (PBM), commonly called red light therapy, uses specific wavelengths of red (630-660nm) and near-infrared (810-850nm) light to stimulate cellular function. Light penetrates skin and is absorbed by mitochondria, particularly cytochrome c oxidase in the electron transport chain.\n\n**Mechanisms of Action:**\n1. **ATP Production**: Increases cellular energy by 40-50% in treated tissues\n2. **Nitric Oxide Release**: Improves circulation and oxygenation\n3. **Reactive Oxygen Species**: Mild hormetic stress activates protective pathways\n4. **Gene Expression**: Upregulates anti-inflammatory and antioxidant genes\n\n**FDA-Cleared Applications:**\n- Pain relief and muscle recovery\n- Wound healing acceleration\n- Wrinkle reduction and skin rejuvenation\n- Hair regrowth (specific devices)\n\n**Research-Supported Uses:**\nOver 5,000 published studies support applications including joint pain, muscle recovery, skin health, cognitive function, and mood improvement.\n\n**Treatment Parameters:**\nDosing measured in Joules/cm² (typically 3-10 J/cm²). Treatment time varies by device power (5-20 minutes at medium power). Panel-style devices treat large areas while targeted devices focus on specific concerns.\n\n**Home vs Clinical:**\nConsumer panels ($200-1,000) provide adequate dosing for most applications. Clinical devices offer higher power for faster treatments.",
+    "avg_price_usd": 100,
+    "price_range_min": 50,
+    "price_range_max": 200,
+    "duration": "15-30 minutes",
+    "recovery_time": "None",
+    "fda_status": "FDA Cleared",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27345825/",
+        "title": "Photobiomodulation Review",
+        "journal": "Photomedicine and Laser Surgery"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24286286/",
+        "title": "Red Light for Skin Aging",
+        "journal": "Photomed Laser Surg"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32084378/",
+        "title": "PBM Mechanisms Meta-Review",
+        "journal": "J Photochem Photobiol B"
+      }
+    ],
+    "benefits": [
+      "Over 5,000 published studies",
+      "FDA cleared for several applications",
+      "Non-invasive and painless",
+      "Can be done at home with consumer devices",
+      "Cumulative benefits with regular use",
+      "Minimal side effect profile"
+    ],
+    "risks": [
+      "Eye protection required (bright light)",
+      "Optimal dosing not standardized",
+      "Quality varies between devices",
+      "Takes consistent use to see results",
+      "May not work for everyone",
+      "Expensive for clinical-grade devices"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "b25c782e-20ec-411f-9b7f-c199387b9139",
+    "category_id": "8d7efa4c-0a26-4503-875e-a6d870a7fe8a",
+    "name": "Senolytic Therapy",
+    "slug": "senolytic-therapy",
+    "short_description": "Treatments to eliminate senescent zombie cells that cause inflammation and aging",
+    "full_description": null,
+    "avg_price_usd": 2000,
+    "price_range_min": 500,
+    "price_range_max": 5000,
+    "duration": "Varies",
+    "recovery_time": "1-3 days",
+    "fda_status": "Investigational",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "fc8af1fb-8222-4724-9fcf-3ed12531ceb6",
+    "category_id": "081a3688-a492-4807-861f-ffcd2e4336a2",
+    "name": "Stem Cell Therapy",
+    "slug": "stem-cell-therapy",
+    "short_description": "Use of mesenchymal stem cells (MSC) to repair damaged tissues and reduce inflammation",
+    "full_description": "Mesenchymal stem cell (MSC) therapy is a form of regenerative medicine that harnesses the body's natural healing mechanisms. MSCs are multipotent stromal cells that can differentiate into various cell types including bone, cartilage, muscle, and fat cells. They are typically harvested from bone marrow, adipose (fat) tissue, or umbilical cord tissue (Wharton's Jelly).\n\nThe therapeutic mechanism works through several pathways:\n1. **Paracrine Signaling**: MSCs secrete growth factors, cytokines, and extracellular vesicles that promote tissue repair\n2. **Immunomodulation**: They reduce harmful inflammation while preserving beneficial immune responses\n3. **Angiogenesis**: Promote new blood vessel formation to enhance oxygen delivery\n4. **Anti-fibrotic Effects**: Help prevent scar tissue formation\n\nClinical applications include osteoarthritis (most studied), autoimmune conditions (MS, Crohn's, lupus), neurological disorders (Parkinson's, stroke recovery), and anti-aging. Cell doses typically range from 50-300 million cells per treatment, with some protocols using multiple infusions over several days.\n\nWhile not FDA approved for most conditions in the US, stem cell therapy is legally offered in many countries including Mexico, Panama, Colombia, and Thailand under their national regulatory frameworks.",
+    "avg_price_usd": 25000,
+    "price_range_min": 5000,
+    "price_range_max": 50000,
+    "duration": "1-3 hours",
+    "recovery_time": "1-7 days",
+    "fda_status": "Investigational",
+    "research_links": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32650953/",
+        "title": "Mesenchymal Stem Cells for Osteoarthritis - Meta-Analysis",
+        "journal": "JAMA Network Open"
+      },
+      {
+        "url": "https://www.nature.com/articles/s41536-019-0083-6",
+        "title": "MSC Mechanisms of Action Review",
+        "journal": "Nature Reviews"
+      },
+      {
+        "url": "https://clinicaltrials.gov/search?cond=stem+cell",
+        "title": "Clinical Trials Database - Stem Cells",
+        "journal": "ClinicalTrials.gov"
+      }
+    ],
+    "benefits": [
+      "Promotes tissue regeneration at cellular level",
+      "Strong anti-inflammatory effects documented in studies",
+      "May slow progression of degenerative conditions",
+      "Single treatment can provide months of benefit",
+      "Can be combined with PRP/exosomes for enhanced effect",
+      "Minimally invasive IV or injection delivery"
+    ],
+    "risks": [
+      "Not FDA approved for most conditions",
+      "Results highly variable between patients",
+      "Quality varies significantly between clinics",
+      "Infection risk at injection sites",
+      "Expensive ($5,000-$50,000 depending on protocol)",
+      "Limited long-term safety data for some applications"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "b3ab8c76-493f-4258-bdfc-04bbb9d638ec",
+    "category_id": "0a5c27fb-dc0a-4a16-bdd8-518a6a915a09",
+    "name": "Thymosin Alpha-1",
+    "slug": "thymosin-alpha-1",
+    "short_description": "Immune-enhancing peptide that modulates T-cell function",
+    "full_description": "Thymosin alpha-1 (Tα1) is a 28-amino acid peptide naturally produced by the thymus gland. It enhances T-cell maturation and function, modulating both innate and adaptive immunity. It is approved in over 35 countries for hepatitis B/C and as an immune adjunct.\n\n**Mechanisms:**\n1. **T-Cell Maturation**: Promotes development of CD4+ and CD8+ T cells\n2. **Dendritic Cell Activation**: Enhances antigen presentation\n3. **Cytokine Modulation**: Balances Th1/Th2 immune responses\n4. **NK Cell Enhancement**: Improves natural killer cell function\n\n**Clinical Applications:**\n- Chronic hepatitis B and C (approved in many countries)\n- Cancer immunotherapy adjunct\n- Immune restoration in aging (immunosenescence)\n- Chronic infections and immune deficiency\n\n**Administration:**\nTypically 1.6mg subcutaneous injection 2-3x weekly. Available as Zadaxin (brand) or compounded.",
+    "avg_price_usd": 400,
+    "price_range_min": 200,
+    "price_range_max": 800,
+    "duration": "2-3 injections per week",
+    "recovery_time": "None",
+    "fda_status": "Not FDA Approved (US), Approved 35+ countries",
+    "research_links": [],
+    "benefits": [
+      "Approved in 35+ countries for hepatitis",
+      "Enhances T-cell and NK cell function",
+      "May reverse immunosenescence of aging",
+      "Good safety profile in studies",
+      "Can be self-administered",
+      "Synergistic with other immune therapies"
+    ],
+    "risks": [
+      "Not FDA approved in the United States",
+      "Injection required",
+      "Moderate cost ($200-800/month)",
+      "Effects may take weeks to manifest",
+      "Quality varies by source",
+      "Limited longevity-specific research"
+    ],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T11:35:34.7621+00:00",
+    "updated_at": "2026-01-20T11:35:34.7621+00:00"
+  },
+  {
+    "id": "05bb8edd-0ef4-456b-98dc-8ca474516a44",
+    "category_id": "0a5c27fb-dc0a-4a16-bdd8-518a6a915a09",
+    "name": "Thyroid Optimization",
+    "slug": "thyroid-optimization",
+    "short_description": "Comprehensive thyroid hormone balancing for metabolism and energy",
+    "full_description": null,
+    "avg_price_usd": 150,
+    "price_range_min": 75,
+    "price_range_max": 300,
+    "duration": "Ongoing",
+    "recovery_time": "None",
+    "fda_status": "FDA Approved",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  },
+  {
+    "id": "f8523741-f9d0-4a44-8a73-3dd78833b473",
+    "category_id": "0a5c27fb-dc0a-4a16-bdd8-518a6a915a09",
+    "name": "TRT Testosterone Replacement",
+    "slug": "testosterone-replacement",
+    "short_description": "Hormone optimization for men to restore youthful testosterone levels",
+    "full_description": null,
+    "avg_price_usd": 200,
+    "price_range_min": 100,
+    "price_range_max": 400,
+    "duration": "Ongoing (weekly)",
+    "recovery_time": "None",
+    "fda_status": "FDA Approved",
+    "research_links": [],
+    "benefits": [],
+    "risks": [],
+    "meta_title": null,
+    "meta_description": null,
+    "created_at": "2026-01-20T09:36:56.555019+00:00",
+    "updated_at": "2026-01-20T09:36:56.555019+00:00"
+  }
+]
