@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChevronRight, DollarSign, Clock, Shield, FlaskConical, CheckCircle, MapPin, ArrowRight } from 'lucide-react';
 import { Metadata } from 'next';
+import { MarkdownRenderer } from '@/components/MarkdownRenderer';
 
 interface Props {
     params: Promise<{ category: string; treatment: string }>;
@@ -147,7 +148,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
                 <section className="py-12 px-4">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-2xl font-bold mb-4 text-slate-900">About {treatment.name}</h2>
-                        <p className="text-slate-600 leading-relaxed max-w-4xl">{treatment.full_description}</p>
+                        <MarkdownRenderer content={treatment.full_description} />
 
                         <div className="grid md:grid-cols-2 gap-8 mt-8">
                             {benefits.length > 0 && (

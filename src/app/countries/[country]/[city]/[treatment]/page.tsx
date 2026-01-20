@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { ChevronRight, DollarSign, Clock, Shield, ArrowRight, Building2, FlaskConical, Star, ExternalLink, CheckCircle } from 'lucide-react';
 import { Metadata } from 'next';
 import { MedicalProcedureSchema, MedicalClinicSchema, FAQSchema, BreadcrumbSchema, OfferSchema } from '@/components/Schema';
+import { MarkdownRenderer } from '@/components/MarkdownRenderer';
 
 interface Props {
     params: Promise<{ country: string; city: string; treatment: string }>;
@@ -236,9 +237,7 @@ export default async function TreatmentInCityPage({ params }: Props) {
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-2xl font-bold mb-4 text-slate-900">About {treatment.name}</h2>
                         <div className="prose prose-slate max-w-4xl">
-                            {treatment.full_description.split('\n\n').map((para: string, i: number) => (
-                                <p key={i} className="text-slate-600 leading-relaxed mb-4">{para}</p>
-                            ))}
+                            <MarkdownRenderer content={treatment.full_description} />
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-8 mt-8">
