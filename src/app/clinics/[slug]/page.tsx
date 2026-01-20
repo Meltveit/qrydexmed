@@ -22,9 +22,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     if (!clinic) return { title: 'Clinic Not Found' };
 
+    const city = Array.isArray(clinic.cities) ? clinic.cities[0] : clinic.cities;
+    const cityName = city?.name;
+
     return {
-        title: `${clinic.name} - Verified Longevity Clinic in ${clinic.cities?.name} | LongevityIndex`,
-        description: clinic.description?.substring(0, 160) || `Book a consultation at ${clinic.name} in ${clinic.cities?.name}. Specialized in longevity and regenerative medicine.`,
+        title: `${clinic.name} - Verified Longevity Clinic in ${cityName} | LongevityIndex`,
+        description: clinic.description?.substring(0, 160) || `Book a consultation at ${clinic.name} in ${cityName}. Specialized in longevity and regenerative medicine.`,
     };
 }
 
@@ -74,9 +77,9 @@ export default async function ClinicPage({ params }: Props) {
                 name={clinic.name}
                 description={clinic.description}
                 address={{
-                    streetAddress: clinic.address || clinic.cities?.name,
-                    addressLocality: clinic.cities?.name,
-                    addressCountry: clinic.cities?.countries?.name,
+                    streetAddress: clinic.address || (Array.isArray(clinic.cities) ? clinic.cities[0]?.name : clinic.cities?.name),
+                    addressLocality: Array.isArray(clinic.cities) ? clinic.cities[0]?.name : clinic.cities?.name,
+                    addressCountry: Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.name : clinic.cities[0]?.countries?.name) : clinic.cities?.countries?.name,
                 }}
                 rating={clinic.rating}
                 reviewCount={clinic.review_count}
@@ -93,8 +96,8 @@ export default async function ClinicPage({ params }: Props) {
                             <div className="flex items-center gap-2 mb-4 text-sm text-slate-500">
                                 <Link href="/clinics" className="hover:text-emerald-600">Clinics</Link>
                                 <span>/</span>
-                                <Link href={`/countries/${clinic.cities?.countries?.slug}`} className="hover:text-emerald-600">
-                                    {clinic.cities?.countries?.name}
+                                <Link href={`/countries/${Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.slug : clinic.cities[0]?.countries?.slug) : clinic.cities?.countries?.slug}`} className="hover:text-emerald-600">
+                                    {Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.name : clinic.cities[0]?.countries?.name) : clinic.cities?.countries?.name}
                                 </Link>
                                 <span>/</span>
                                 <span className="text-slate-900">{clinic.name}</span>
@@ -107,7 +110,7 @@ export default async function ClinicPage({ params }: Props) {
                             <div className="flex flex-wrap items-center gap-4 text-slate-600 mb-6">
                                 <span className="flex items-center gap-1 bg-slate-100 px-3 py-1 rounded-full text-sm">
                                     <MapPin className="w-4 h-4" />
-                                    {clinic.cities?.name}, {clinic.cities?.countries?.name}
+                                    {Array.isArray(clinic.cities) ? clinic.cities[0]?.name : clinic.cities?.name}, {Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.name : clinic.cities[0]?.countries?.name) : clinic.cities?.countries?.name}
                                 </span>
                                 <span className="flex items-center gap-1 bg-slate-100 px-3 py-1 rounded-full text-sm">
                                     <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
@@ -144,7 +147,7 @@ export default async function ClinicPage({ params }: Props) {
                                 )}
                                 <div className="flex items-start gap-3 text-slate-600">
                                     <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
-                                    <span>{clinic.address || `${clinic.cities?.name}, ${clinic.cities?.countries?.name}`}</span>
+                                    <span>{clinic.address || `${Array.isArray(clinic.cities) ? clinic.cities[0]?.name : clinic.cities?.name}, ${Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.name : clinic.cities[0]?.countries?.name) : clinic.cities?.countries?.name}`}</span>
                                 </div>
                             </div>
 
@@ -211,7 +214,7 @@ export default async function ClinicPage({ params }: Props) {
                                             </div>
                                             <div className="mt-4 pt-4 border-t border-slate-100 flex justify-end">
                                                 <Link
-                                                    href={`/countries/${clinic.cities?.countries?.slug}/${clinic.cities?.slug}/${ct.treatments?.slug}`}
+                                                    href={`/countries/${Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.slug : clinic.cities[0]?.countries?.slug) : clinic.cities?.countries?.slug}/${Array.isArray(clinic.cities) ? clinic.cities[0]?.slug : clinic.cities?.slug}/${ct.treatments?.slug}`}
                                                     className="text-sm font-medium text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
                                                 >
                                                     Learn about this treatment <ArrowRight className="w-4 h-4" />
