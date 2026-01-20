@@ -134,7 +134,9 @@ export default async function CityPage({ params }: Props) {
                                 >
                                     <div className="flex items-start justify-between mb-3">
                                         <div>
-                                            <h3 className="text-xl font-semibold text-slate-900">{clinic.name}</h3>
+                                            <Link href={`/clinics/${clinic.slug}`} className="hover:text-emerald-600 transition">
+                                                <h3 className="text-xl font-semibold text-slate-900">{clinic.name}</h3>
+                                            </Link>
                                             {clinic.is_verified && (
                                                 <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded">
                                                     ✓ Verified

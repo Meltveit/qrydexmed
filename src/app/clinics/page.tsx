@@ -56,7 +56,9 @@ export default async function ClinicsPage() {
                                 >
                                     <div className="flex items-start justify-between mb-3">
                                         <div>
-                                            <h3 className="text-xl font-semibold text-slate-900">{clinic.name}</h3>
+                                            <Link href={`/clinics/${clinic.slug}`} className="hover:text-emerald-600 transition">
+                                                <h3 className="text-xl font-semibold text-slate-900">{clinic.name}</h3>
+                                            </Link>
                                             <p className="text-slate-500 text-sm flex items-center gap-1 mt-1">
                                                 <MapPin className="w-3 h-3" />
                                                 {clinic.cities?.name}
@@ -91,10 +93,10 @@ export default async function ClinicsPage() {
 
                                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                                         <Link
-                                            href={`/countries/${clinic.cities?.countries?.slug}/${clinic.cities?.slug}`}
+                                            href={`/clinics/${clinic.slug}`}
                                             className="text-emerald-600 hover:text-emerald-700 text-sm font-medium"
                                         >
-                                            View in {clinic.cities?.name} →
+                                            View Clinic Profile →
                                         </Link>
                                         {clinic.website && (
                                             <a
