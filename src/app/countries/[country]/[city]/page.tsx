@@ -154,15 +154,28 @@ export default async function CityPage({ params }: Props) {
                                         <span>📍 {clinic.address?.split(',').slice(0, 2).join(',')}</span>
                                     </div>
 
-                                    {clinic.certifications && (
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {JSON.parse(clinic.certifications).slice(0, 3).map((cert: string, i: number) => (
-                                                <span key={i} className="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">
-                                                    {cert}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    )}
+                                    {clinic.certifications && (() => {
+                                        let certs: string[] = [];
+                                        try {
+                                            certs = typeof clinic.certifications === 'string'
+                                                ? JSON.parse(clinic.certifications)
+                                                : clinic.certifications;
+                                        } catch { certs = []; }
+
+                                        // Handle edge case where it might be a single string from bad import
+                                        if (!Array.isArray(certs) && typeof certs === 'string') certs = [certs];
+                                        if (!Array.isArray(certs)) certs = [];
+
+                                        return certs.length > 0 && (
+                                            <div className="flex flex-wrap gap-2 mb-4">
+                                                {certs.slice(0, 3).map((cert: string, i: number) => (
+                                                    <span key={i} className="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">
+                                                        {cert}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        );
+                                    })()}
 
                                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                                         <span className="text-slate-500 text-sm">Est. {clinic.years_established}</span>
