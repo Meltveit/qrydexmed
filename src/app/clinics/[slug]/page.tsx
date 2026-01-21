@@ -199,7 +199,7 @@ export default async function ClinicPage({ params }: Props) {
                                                     <h3 className="font-bold text-lg text-slate-900 mb-1">
                                                         {ct.treatments?.name}
                                                     </h3>
-                                                    <p className="text-slate-500 text-sm max-w-xl">
+                                                    <p className="text-slate-600 text-sm max-w-xl">
                                                         {ct.treatments?.short_description}
                                                     </p>
                                                 </div>
