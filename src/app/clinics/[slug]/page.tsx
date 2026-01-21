@@ -124,39 +124,102 @@ export default async function ClinicPage({ params }: Props) {
                                 )}
                             </div>
 
-                            <div className="flex flex-wrap gap-2 mb-6">
+                            <div className="flex flex-wrap gap-2 mb-8">
                                 <span className="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-100">
-                                    Longveity Medicine
+                                    Longevity Medicine
                                 </span>
                                 <span className="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-medium border border-slate-200">
                                     Regenerative Therapies
                                 </span>
                             </div>
+
+                            {/* About Section - Moved Up */}
+                            {clinic.description && (
+                                <div className="prose prose-slate max-w-none mb-12">
+                                    <h2 className="text-xl font-bold text-slate-900 mb-4">About {clinic.name}</h2>
+                                    <MarkdownRenderer content={clinic.description || ''} />
+                                </div>
+                            )}
+
+                            {/* Accreditations */}
+                            {certifications && certifications.length > 0 && (
+                                <div className="mb-12">
+                                    <h3 className="flex items-center gap-2 font-bold text-lg text-slate-900 mb-4">
+                                        <Award className="w-5 h-5 text-emerald-600" />
+                                        Accreditations & Certifications
+                                    </h3>
+                                    <div className="flex flex-wrap gap-2">
+                                        {certifications.map((cert: string, i: number) => (
+                                            <span key={i} className="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-lg text-sm shadow-sm">
+                                                {cert}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Treatments */}
+                            <div className="mb-8">
+                                <h3 className="flex items-center gap-2 font-bold text-lg text-slate-900 mb-6">
+                                    <Shield className="w-5 h-5 text-emerald-600" />
+                                    Available Treatments
+                                </h3>
+
+                                {treatments && treatments.length > 0 ? (
+                                    <div className="grid gap-4">
+                                        {treatments.map((ct: any) => (
+                                            <div key={ct.id} className="bg-white border border-slate-200 rounded-xl p-5 hover:border-emerald-300 transition group">
+                                                <div className="flex justify-between items-start mb-2">
+                                                    <h4 className="font-bold text-slate-900 group-hover:text-emerald-700 transition">
+                                                        {ct.treatments?.name}
+                                                    </h4>
+                                                    {ct.price && (
+                                                        <span className="font-bold text-emerald-600">
+                                                            ${ct.price.toLocaleString()}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <p className="text-slate-600 text-sm mb-3">
+                                                    {ct.treatments?.short_description}
+                                                </p>
+                                                <Link
+                                                    href={`/treatments/${ct.treatments?.treatment_categories?.slug}/${ct.treatments?.slug}`}
+                                                    className="text-emerald-600 text-xs font-medium hover:underline flex items-center gap-1"
+                                                >
+                                                    Learn about this treatment <ArrowRight className="w-3 h-3" />
+                                                </Link>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <p className="text-slate-500 italic">No specific treatments listed.</p>
+                                )}
+                            </div>
                         </div>
 
                         {/* Right Column / CTA Card */}
-                        <div className="w-full md:w-80 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <div className="w-full md:w-80 bg-white p-6 rounded-xl border border-slate-200 shadow-sm h-fit sticky top-24">
                             <h3 className="font-bold text-slate-900 mb-4">Contact Information</h3>
                             <div className="space-y-4 mb-6">
                                 {clinic.website && (
                                     <div className="flex items-start gap-3 text-slate-600 group">
                                         <Globe className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:text-emerald-600 transition" />
-                                        <a href={clinic.website} target="_blank" rel="noopener" className="hover:text-emerald-600 transition break-all text-sm">
-                                            {clinic.website.replace(/^https?:\/\//, '')}
+                                        <a href={clinic.website} target="_blank" rel="noopener" className="hover:text-emerald-600 transition break-all text-sm font-medium">
+                                            Visit Website
                                         </a>
                                     </div>
                                 )}
                                 {clinic.phone && (
                                     <div className="flex items-center gap-3 text-slate-600">
                                         <Phone className="w-5 h-5 flex-shrink-0" />
-                                        <span className="text-sm">{clinic.phone}</span>
+                                        <span className="text-sm font-medium">{clinic.phone}</span>
                                     </div>
                                 )}
                                 <div className="flex items-start gap-3 text-slate-600">
                                     <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                                    <span className="text-sm leading-relaxed">
+                                    <span className="text-sm leading-relaxed font-medium">
                                         {clinic.address ? clinic.address : (
-                                            <span className="italic text-slate-400">Location details available on request</span>
+                                            <span className="italic text-slate-400">Location details upon request</span>
                                         )}
                                     </span>
                                 </div>
@@ -167,18 +230,40 @@ export default async function ClinicPage({ params }: Props) {
                                     href={clinic.website}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold py-3 rounded-lg hover:bg-emerald-700 transition"
+                                    className="w-full flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold py-3 rounded-lg hover:bg-emerald-700 transition shadow-sm hover:shadow-md"
                                 >
                                     Visit Official Website <ArrowRight className="w-4 h-4" />
                                 </a>
                             ) : (
                                 <Link
                                     href="/contact"
-                                    className="w-full flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-3 rounded-lg hover:bg-slate-900 transition"
+                                    className="w-full flex items-center justify-center gap-2 bg-slate-800 text-white font-semibold py-3 rounded-lg hover:bg-slate-900 transition shadow-sm hover:shadow-md"
                                 >
                                     Contact for Access <ArrowRight className="w-4 h-4" />
                                 </Link>
                             )}
+
+                            <div className="mt-6 pt-6 border-t border-slate-100">
+                                <h4 className="font-semibold text-slate-900 text-sm mb-3">Why Choose This Clinic?</h4>
+                                <ul className="space-y-2">
+                                    <li className="flex items-start gap-2 text-sm text-slate-600">
+                                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                                        <span>Verified international standards</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-sm text-slate-600">
+                                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                                        <span>Specialized longevity protocols</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-sm text-slate-600">
+                                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                                        <span>English-speaking staff</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-sm text-slate-600">
+                                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                                        <span>Concierge services available</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -188,100 +273,11 @@ export default async function ClinicPage({ params }: Props) {
                 <div className="grid md:grid-cols-3 gap-12">
                     {/* Main Content */}
                     <div className="md:col-span-2 space-y-12">
-
-                        {/* Certifications */}
-                        {certifications.length > 0 && (
-                            <section>
-                                <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                                    <Award className="w-6 h-6 text-emerald-600" />
-                                    Accreditations & Certifications
-                                </h2>
-                                <div className="flex flex-wrap gap-3">
-                                    {certifications.map((cert, i) => (
-                                        <span key={i} className="bg-slate-50 border border-slate-200 px-4 py-2 rounded-lg text-slate-700 font-medium">
-                                            {cert}
-                                        </span>
-                                    ))}
-                                </div>
-                            </section>
-                        )}
-
-                        {/* Treatments */}
-                        {clinicTreatments && clinicTreatments.length > 0 && (
-                            <section>
-                                <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                                    <Shield className="w-6 h-6 text-emerald-600" />
-                                    Available Treatments
-                                </h2>
-                                <div className="grid gap-4">
-                                    {clinicTreatments.map((ct: any) => (
-                                        <div key={ct.id} className="bg-white border border-slate-200 rounded-xl p-6 hover:border-emerald-300 transition">
-                                            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
-                                                <div>
-                                                    <h3 className="font-bold text-lg text-slate-900 mb-1">
-                                                        {ct.treatments?.name}
-                                                    </h3>
-                                                    <p className="text-slate-600 text-sm max-w-xl">
-                                                        {ct.treatments?.short_description}
-                                                    </p>
-                                                </div>
-                                                <div className="text-right">
-                                                    <div className="text-xl font-bold text-emerald-600">
-                                                        ${ct.price?.toLocaleString()}
-                                                    </div>
-                                                    {ct.notes && (
-                                                        <div className="text-xs text-slate-400 mt-1">{ct.notes}</div>
-                                                    )}
-                                                </div>
-                                            </div>
-                                            <div className="mt-4 pt-4 border-t border-slate-100 flex justify-end">
-                                                <Link
-                                                    href={`/countries/${Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.slug : clinic.cities[0]?.countries?.slug) : clinic.cities?.countries?.slug}/${Array.isArray(clinic.cities) ? clinic.cities[0]?.slug : clinic.cities?.slug}/${ct.treatments?.slug}`}
-                                                    className="text-sm font-medium text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
-                                                >
-                                                    Learn about this treatment <ArrowRight className="w-4 h-4" />
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </section>
-                        )}
-
-                        {clinic.description && (
-                            <section>
-                                <h2 className="text-2xl font-bold text-slate-900 mb-4">About {clinic.name}</h2>
-                                <div className="prose prose-slate max-w-none">
-                                    <MarkdownRenderer content={clinic.description} />
-                                </div>
-                            </section>
-                        )}
+                        {/* This section is now empty as content moved up */}
                     </div>
 
                     {/* Sidebar */}
                     <div className="space-y-8">
-                        <div className="bg-emerald-50 rounded-xl p-6 border border-emerald-100">
-                            <h3 className="font-bold text-emerald-800 mb-4">Why Choose This Clinic?</h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5" />
-                                    <span className="text-slate-700">Verified international standards</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5" />
-                                    <span className="text-slate-700">Specialized longevity protocols</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5" />
-                                    <span className="text-slate-700">English-speaking staff</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5" />
-                                    <span className="text-slate-700">Concierge services available</span>
-                                </li>
-                            </ul>
-                        </div>
-
                         {clinic.years_established && (
                             <div className="bg-white border border-slate-200 rounded-xl p-6">
                                 <div className="flex items-center gap-3 mb-2">
