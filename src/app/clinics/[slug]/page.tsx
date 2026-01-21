@@ -165,9 +165,9 @@ export default async function ClinicPage({ params }: Props) {
                                     Available Treatments
                                 </h3>
 
-                                {treatments && treatments.length > 0 ? (
+                                {clinicTreatments && clinicTreatments.length > 0 ? (
                                     <div className="grid gap-4">
-                                        {treatments.map((ct: any) => (
+                                        {clinicTreatments.map((ct: any) => (
                                             <div key={ct.id} className="bg-white border border-slate-200 rounded-xl p-5 hover:border-emerald-300 transition group">
                                                 <div className="flex justify-between items-start mb-2">
                                                     <h4 className="font-bold text-slate-900 group-hover:text-emerald-700 transition">
