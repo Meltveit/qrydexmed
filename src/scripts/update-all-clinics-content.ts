@@ -36,15 +36,7 @@ function generateProfessionalDescription(clinicName: string, city: string | unde
     const facilityTerm = facilityKeywords[Math.floor(Math.random() * facilityKeywords.length)];
     const year = 2005 + Math.floor(Math.random() * 15);
 
-    return `${clinicName} establishes itself as a premier destination for ${specializedTerm} in ${city || 'the region'}. Operating within a ${facilityTerm}, the team focuses on bridging the gap between conventional medical standards and cutting-edge longevity science.
-
-**Clinical Excellence:**
-Patients at ${clinicName} receive personalized care pathways designed to address the root causes of aging and chronic inflammation. By leveraging advanced diagnostics and ${specializedTerm}, the clinic ensures that every protocol is tailored to the unique biological needs of the individual.
-
-**Why Choose ${clinicName}:**
-*   **Expert Oversight**: Led by board-certified physicians specializing in integrative medicine.
-*   **Comprehensive Care**: From initial consultation to post-treatment follow-up, the patient journey is managed with white-glove service.
-*   **Safety & Compliance**: Adhering to strict international medical safety standards to ensure optimal outcomes.`;
+    return `${clinicName} establishes itself as a premier destination for ${specializedTerm} in ${city || 'the region'}. Operating within a ${facilityTerm}, the team focuses on bridging the gap between conventional medical standards and cutting-edge longevity science.\n\n**Clinical Excellence:**\nPatients at ${clinicName} receive personalized care pathways designed to address the root causes of aging and chronic inflammation. By leveraging advanced diagnostics and ${specializedTerm}, the clinic ensures that every protocol is tailored to the unique biological needs of the individual.\n\n**Why Choose ${clinicName}:**\n*   **Expert Oversight**: Led by board-certified physicians specializing in integrative medicine.\n*   **Comprehensive Care**: From initial consultation to post-treatment follow-up, the patient journey is managed with white-glove service.\n*   **Safety & Compliance**: Adhering to strict international medical safety standards to ensure optimal outcomes.`;
 }
 
 async function updateAllClinics() {

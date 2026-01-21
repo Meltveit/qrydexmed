@@ -168,13 +168,13 @@ export function OrganizationSchema() {
     const schema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'LongevityIndex',
-        url: 'https://longevityindex.com',
-        logo: 'https://longevityindex.com/logo.png',
-        description: 'The world\'s directory for longevity clinics and regenerative medicine centers.',
+        name: 'Qrydex',
+        url: 'https://www.qrydex.com',
+        logo: 'https://www.qrydex.com/logo.png',
+        description: 'The world\'s AI index for longevity clinics and regenerative medicine centers.',
         sameAs: [
-            'https://twitter.com/longevityindex',
-            'https://linkedin.com/company/longevityindex',
+            'https://twitter.com/qrydex',
+            'https://linkedin.com/company/qrydex',
         ],
     };
 

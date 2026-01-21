@@ -3,8 +3,8 @@ import { Mail, ArrowRight, Building2, User } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Contact Us - LongevityIndex',
-    description: 'Contact LongevityIndex for help finding a clinic or listing your medical center.',
+    title: 'Contact Us - Qrydex',
+    description: 'Contact Qrydex for help finding a clinic or listing your medical center.',
 };
 
 export default function ContactPage() {
@@ -55,12 +55,9 @@ export default function ContactPage() {
                                     />
                                 </div>
                                 <button className="w-full bg-emerald-600 text-white font-semibold py-3 rounded-lg hover:bg-emerald-700 transition flex items-center justify-center gap-2">
-                                    Get Help Finding a Clinic <ArrowRight className="w-4 h-4" />
+                                    Send Inquiry <ArrowRight className="w-4 h-4" />
                                 </button>
                             </form>
-                            <p className="text-xs text-slate-400 text-center">
-                                By submitting, you agree to our privacy policy.
-                            </p>
                         </div>
                     </div>
 
@@ -106,18 +103,7 @@ export default function ContactPage() {
                     </div>
                 </div>
 
-                <div className="mt-16 text-center">
-                    <p className="text-slate-600 mb-4">
-                        Have a general question? Email us directly.
-                    </p>
-                    <a
-                        href="mailto:hello@longevityindex.com"
-                        className="inline-flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-600 transition"
-                    >
-                        <Mail className="w-5 h-5" />
-                        hello@longevityindex.com
-                    </a>
-                </div>
+
             </section>
         </div>
     );

@@ -9,10 +9,10 @@ export default function Footer() {
                     <div>
                         <Link href="/" className="flex items-center gap-2 mb-4">
                             <span className="text-2xl">🧬</span>
-                            <span className="font-bold text-xl text-white">LongevityIndex</span>
+                            <span className="font-bold text-xl text-white">Qrydex</span>
                         </Link>
                         <p className="text-slate-400 text-sm">
-                            The world's directory for longevity clinics and regenerative medicine centers.
+                            The world's AI index for longevity clinics and regenerative medicine centers.
                         </p>
                     </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
                 <div className="border-t border-slate-800 pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-sm text-slate-500">
-                            © {new Date().getFullYear()} LongevityIndex. All rights reserved.
+                            © {new Date().getFullYear()} Qrydex. All rights reserved.
                         </p>
                         <p className="text-xs text-slate-500 max-w-xl text-center md:text-right">
                             Medical Disclaimer: This website provides educational information only.

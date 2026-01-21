@@ -12,15 +12,15 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-ES9S2X
 
 export const metadata: Metadata = {
   title: {
-    default: "LongevityIndex - Find the Best Longevity & Biohacking Clinics Worldwide",
-    template: "%s | LongevityIndex",
+    default: "Qrydex - The World's AI Index for Longevity & Biohacking",
+    template: "%s | Qrydex",
   },
   description: "Discover top-rated longevity clinics, stem cell therapy centers, and biohacking facilities across the globe. Compare prices, read reviews, and book consultations.",
   keywords: ["longevity clinics", "stem cell therapy", "biohacking", "anti-aging", "regenerative medicine", "medical tourism", "NAD+ therapy", "exosome therapy"],
   authors: [{ name: "LongevityIndex" }],
-  creator: "LongevityIndex",
-  publisher: "LongevityIndex",
-  metadataBase: new URL("https://longevityindex.com"),
+  creator: "Qrydex",
+  publisher: "Qrydex",
+  metadataBase: new URL("https://www.qrydex.com"),
   alternates: {
     canonical: "/",
   },
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     apple: "/favicon.png", // Ideally generate a specific apple touch icon, but this works for now
   },
   openGraph: {
-    title: "LongevityIndex - Global Longevity Clinic Directory",
+    title: "Qrydex - Global Longevity Clinic Directory",
     description: "Find and compare the world's best longevity and biohacking clinics",
-    url: "https://longevityindex.com",
-    siteName: "LongevityIndex",
+    url: "https://www.qrydex.com",
+    siteName: "Qrydex",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LongevityIndex - Global Longevity Clinic Directory",
+    title: "Qrydex - Global Longevity Clinic Directory",
     description: "Find and compare the world's best longevity and biohacking clinics",
   },
   robots: {

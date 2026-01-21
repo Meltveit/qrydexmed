@@ -125,7 +125,7 @@ export default async function ClinicPage({ params }: Props) {
                             </div>
 
                             <p className="text-lg text-slate-600 leading-relaxed max-w-3xl">
-                                {clinic.description}
+                                {clinic.meta_description || clinic.description?.substring(0, 150) + '...'}
                             </p>
                         </div>
 
