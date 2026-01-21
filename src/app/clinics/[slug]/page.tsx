@@ -96,7 +96,7 @@ export default async function ClinicPage({ params }: Props) {
                             <div className="flex items-center gap-2 mb-4 text-sm text-slate-500">
                                 <Link href="/clinics" className="hover:text-emerald-600">Clinics</Link>
                                 <span>/</span>
-                                <Link href={`/countries/${Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.slug : clinic.cities[0]?.countries?.slug) : clinic.cities?.countries?.slug}`} className="hover:text-emerald-600">
+                                <Link href={`/longevity-clinics-in/${Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.slug : clinic.cities[0]?.countries?.slug) : clinic.cities?.countries?.slug}`} className="hover:text-emerald-600">
                                     {Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.name : clinic.cities[0]?.countries?.name) : clinic.cities?.countries?.name}
                                 </Link>
                                 <span>/</span>
@@ -183,10 +183,10 @@ export default async function ClinicPage({ params }: Props) {
                                                     {ct.treatments?.short_description}
                                                 </p>
                                                 <Link
-                                                    href={`/treatments/${ct.treatments?.treatment_categories?.slug}/${ct.treatments?.slug}`}
-                                                    className="text-emerald-600 text-xs font-medium hover:underline flex items-center gap-1"
+                                                    href={`/longevity-clinics-in/${Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.slug : clinic.cities[0]?.countries?.slug) : clinic.cities?.countries?.slug}/${Array.isArray(clinic.cities) ? clinic.cities[0]?.slug : clinic.cities?.slug}/${ct.treatments?.slug}`}
+                                                    className="text-sm font-medium text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
                                                 >
-                                                    Learn about this treatment <ArrowRight className="w-3 h-3" />
+                                                    Learn about this treatment <ArrowRight className="w-4 h-4" />
                                                 </Link>
                                             </div>
                                         ))}

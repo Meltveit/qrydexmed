@@ -148,7 +148,7 @@ export default async function HomePage() {
               <h2 className="text-3xl font-bold text-slate-900">Top Destinations</h2>
               <p className="text-slate-600">World-class medical tourism hubs</p>
             </div>
-            <Link href="/countries" className="text-emerald-600 hover:text-emerald-700 flex items-center gap-1 font-medium">
+            <Link href="/longevity-clinics-in" className="text-emerald-600 hover:text-emerald-700 flex items-center gap-1 font-medium">
               View all <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -156,7 +156,7 @@ export default async function HomePage() {
             {countries?.map((country) => (
               <Link
                 key={country.id}
-                href={`/countries/${country.slug}`}
+                href={`/longevity-clinics-in/${country.slug}`}
                 className="bg-white border border-slate-200 rounded-xl p-6 card-hover hover:border-emerald-300 group"
               >
                 <div className="flex items-center gap-4 mb-4">

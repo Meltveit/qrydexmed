@@ -56,7 +56,7 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <Link href="/countries" className="text-slate-600 hover:text-slate-900 transition">
+                    <Link href="/longevity-clinics-in" className="text-slate-600 hover:text-emerald-600 font-medium">
                         Destinations
                     </Link>
 

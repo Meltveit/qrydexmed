@@ -21,16 +21,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.9,
         },
         {
+            url: `${BASE_URL}/longevity-clinics-in`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.8,
+        },
+        {
             url: `${BASE_URL}/countries`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.9,
-        },
-        {
-            url: `${BASE_URL}/clinics`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.8,
         },
         {
             url: `${BASE_URL}/contact`,
@@ -57,8 +57,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         .from('countries')
         .select('slug, updated_at');
 
-    const countryPages: MetadataRoute.Sitemap = (countries || []).map((country) => ({
-        url: `${BASE_URL}/countries/${country.slug}`,
+    // 2. Dynamic Country Pages
+    const countryRoutes: MetadataRoute.Sitemap = (countries || []).map((country) => ({
+        url: `${BASE_URL}/longevity-clinics-in/${country.slug}`,
         lastModified: country.updated_at ? new Date(country.updated_at) : new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.8,
@@ -70,7 +71,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         .select('slug, updated_at, countries(slug)');
 
     const cityPages: MetadataRoute.Sitemap = (cities || []).map((city: any) => ({
-        url: `${BASE_URL}/countries/${city.countries?.slug}/${city.slug}`,
+        url: `${BASE_URL}/longevity-clinics-in/${city.countries?.slug}/${city.slug}`,
         lastModified: city.updated_at ? new Date(city.updated_at) : new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.8,
@@ -108,7 +109,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         for (const treatment of treatments || []) {
             const treatmentData = treatment as any;
             moneyPages.push({
-                url: `${BASE_URL}/countries/${cityData.countries?.slug}/${cityData.slug}/${treatmentData.slug}`,
+                url: `${BASE_URL}/longevity-clinics-in/${cityData.countries?.slug}/${cityData.slug}/${treatmentData.slug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 1.0, // Highest priority - money pages
