@@ -183,7 +183,7 @@ export default async function ClinicPage({ params }: Props) {
                                                     {ct.treatments?.short_description}
                                                 </p>
                                                 <Link
-                                                    href={`/longevity-clinics-in/${Array.isArray(clinic.cities) ? (Array.isArray(clinic.cities[0]?.countries) ? clinic.cities[0]?.countries[0]?.slug : clinic.cities[0]?.countries?.slug) : clinic.cities?.countries?.slug}/${Array.isArray(clinic.cities) ? clinic.cities[0]?.slug : clinic.cities?.slug}/${ct.treatments?.slug}`}
+                                                    href={`/${ct.treatments?.slug}/${Array.isArray(clinic.cities) ? clinic.cities[0]?.slug : clinic.cities?.slug}`}
                                                     className="text-sm font-medium text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
                                                 >
                                                     Learn about this treatment <ArrowRight className="w-4 h-4" />
