@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChevronRight, DollarSign, Clock, Shield, ArrowRight, Building2, FlaskConical, Star, ExternalLink, CheckCircle } from 'lucide-react';
 import { Metadata } from 'next';
-import { MedicalProcedureSchema, MedicalClinicSchema, FAQSchema, BreadcrumbSchema, OfferSchema } from '@/components/Schema';
+import { MedicalProcedureSchema, MedicalClinicSchema, FAQSchema, BreadcrumbSchema } from '@/components/Schema';
 import { MarkdownRenderer } from '@/components/MarkdownRenderer';
 
 interface Props {
-    params: Promise<{ country: string; city: string; treatment: string }>;
+    params: Promise<{ country: string; slug: string; treatment: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { country: countrySlug, city: citySlug, treatment: treatmentSlug } = await params;
+    const { country: countrySlug, slug: citySlug, treatment: treatmentSlug } = await params;
     const supabase = await createClient();
 
     const { data: city } = await supabase
@@ -40,13 +40,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             type: 'website',
         },
         alternates: {
-            canonical: `/longevity-clinics-in/${countrySlug}/${citySlug}/${treatmentSlug}`,
+            canonical: `/longevity-treatments-in/${countrySlug}/${citySlug}/${treatmentSlug}`,
         },
     };
 }
 
 export default async function TreatmentInCityPage({ params }: Props) {
-    const { country: countrySlug, city: citySlug, treatment: treatmentSlug } = await params;
+    const { country: countrySlug, slug: citySlug, treatment: treatmentSlug } = await params;
     const supabase = await createClient();
 
     const { data: country } = await supabase
@@ -137,10 +137,10 @@ export default async function TreatmentInCityPage({ params }: Props) {
     // Breadcrumb data
     const breadcrumbs = [
         { name: 'Home', url: 'https://longevityindex.com/' },
-        { name: 'Countries', url: 'https://longevityindex.com/longevity-clinics-in' },
-        { name: country.name, url: `https://longevityindex.com/longevity-clinics-in/${country.slug}` },
-        { name: city.name, url: `https://longevityindex.com/longevity-clinics-in/${country.slug}/${city.slug}` },
-        { name: treatment.name, url: `https://longevityindex.com/longevity-clinics-in/${country.slug}/${city.slug}/${treatment.slug}` },
+        { name: 'Treatments', url: 'https://longevityindex.com/longevity-treatments-in' },
+        { name: country.name, url: `https://longevityindex.com/longevity-treatments-in/${country.slug}` },
+        { name: city.name, url: `https://longevityindex.com/longevity-treatments-in/${country.slug}/${city.slug}` },
+        { name: treatment.name, url: `https://longevityindex.com/longevity-treatments-in/${country.slug}/${city.slug}/${treatment.slug}` },
     ];
 
     return (
@@ -180,11 +180,11 @@ export default async function TreatmentInCityPage({ params }: Props) {
                 <nav className="flex items-center text-sm text-slate-500 flex-wrap gap-1">
                     <Link href="/" className="hover:text-slate-900">Home</Link>
                     <ChevronRight className="w-4 h-4" />
-                    <Link href="/longevity-clinics-in" className="hover:text-slate-900">Countries</Link>
+                    <Link href="/longevity-treatments-in" className="hover:text-slate-900">Treatments</Link>
                     <ChevronRight className="w-4 h-4" />
-                    <Link href={`/longevity-clinics-in/${country.slug}`} className="hover:text-slate-900">{country.name}</Link>
+                    <Link href={`/longevity-treatments-in/${country.slug}`} className="hover:text-slate-900">{country.name}</Link>
                     <ChevronRight className="w-4 h-4" />
-                    <Link href={`/longevity-clinics-in/${country.slug}/${city.slug}`} className="hover:text-slate-900">{city.name}</Link>
+                    <Link href={`/longevity-treatments-in/${country.slug}/${city.slug}`} className="hover:text-slate-900">{city.name}</Link>
                     <ChevronRight className="w-4 h-4" />
                     <span className="text-slate-900 font-medium">{treatment.name}</span>
                 </nav>
@@ -405,7 +405,7 @@ export default async function TreatmentInCityPage({ params }: Props) {
                             {relatedTreatments.map((rt) => (
                                 <Link
                                     key={rt.slug}
-                                    href={`/longevity-clinics-in/${country.slug}/${city.slug}/${rt.slug}`}
+                                    href={`/longevity-treatments-in/${country.slug}/${city.slug}/${rt.slug}`}
                                     className="bg-white border border-slate-200 rounded-lg p-4 hover:border-emerald-300 transition"
                                 >
                                     <h4 className="font-medium text-slate-900">{rt.name}</h4>

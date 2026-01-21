@@ -101,6 +101,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.9,
     }));
 
+    // 3. Country Treatment Indices (NEW)
+    const countryTreatmentIndices: MetadataRoute.Sitemap = (countries || []).map((country) => ({
+        url: `${BASE_URL}/longevity-treatments-in/${country.slug}`,
+        lastModified: country.updated_at ? new Date(country.updated_at) : new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+    }));
+
+    // 4. Country Treatment Pages (NEW - "Stem Cells in Mexico")
+    const countryTreatmentPages: MetadataRoute.Sitemap = [];
+    for (const country of countries || []) {
+        for (const treatment of treatments || []) {
+            const tData = treatment as any;
+            countryTreatmentPages.push({
+                url: `${BASE_URL}/longevity-treatments-in/${country.slug}/${tData.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly' as const,
+                priority: 0.9,
+            });
+        }
+    }
+
     // Generate money pages (treatment in city) - HIGH PRIORITY
     const moneyPages: MetadataRoute.Sitemap = [];
 
@@ -109,7 +131,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         for (const treatment of treatments || []) {
             const treatmentData = treatment as any;
             moneyPages.push({
-                url: `${BASE_URL}/longevity-clinics-in/${cityData.countries?.slug}/${cityData.slug}/${treatmentData.slug}`,
+                url: `${BASE_URL}/longevity-treatments-in/${cityData.countries?.slug}/${cityData.slug}/${treatmentData.slug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 1.0, // Highest priority - money pages
@@ -120,9 +142,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return [
         ...staticPages,
         ...countryPages,
+        ...countryTreatmentIndices,
         ...cityPages,
         ...categoryPages,
         ...treatmentPages,
+        ...countryTreatmentPages,
         ...moneyPages,
     ];
 }
