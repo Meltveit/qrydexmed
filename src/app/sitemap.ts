@@ -58,7 +58,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         .select('slug, updated_at');
 
     // 2. Dynamic Country Pages
-    const countryRoutes: MetadataRoute.Sitemap = (countries || []).map((country) => ({
+    const countryPages: MetadataRoute.Sitemap = (countries || []).map((country) => ({
         url: `${BASE_URL}/longevity-clinics-in/${country.slug}`,
         lastModified: country.updated_at ? new Date(country.updated_at) : new Date(),
         changeFrequency: 'weekly' as const,
