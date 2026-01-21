@@ -81,7 +81,6 @@ export default function Header() {
                     <Menu className="w-6 h-6 text-slate-600" />
                 </button>
             </div>
-        </div>
-        </header >
+        </header>
     );
 }
