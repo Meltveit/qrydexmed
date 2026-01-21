@@ -94,28 +94,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         .from('treatments')
         .select('slug, updated_at, treatment_categories(slug)');
 
+    // 3. Global Treatment Hubs (Root)
     const treatmentPages: MetadataRoute.Sitemap = (treatments || []).map((t: any) => ({
-        url: `${BASE_URL}/treatments/${t.treatment_categories?.slug}/${t.slug}`,
+        url: `${BASE_URL}/${t.slug}`,
         lastModified: t.updated_at ? new Date(t.updated_at) : new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.9,
-    }));
-
-    // 3. Country Treatment Indices (NEW)
-    const countryTreatmentIndices: MetadataRoute.Sitemap = (countries || []).map((country) => ({
-        url: `${BASE_URL}/longevity-treatments-in/${country.slug}`,
-        lastModified: country.updated_at ? new Date(country.updated_at) : new Date(),
         changeFrequency: 'weekly' as const,
-        priority: 0.8,
+        priority: 1.0,
     }));
 
-    // 4. Country Treatment Pages (NEW - "Stem Cells in Mexico")
-    const countryTreatmentPages: MetadataRoute.Sitemap = [];
+    // 4. Treatment in Country (Dispatcher: /[treatment]/[country])
+    const treatmentInCountryPages: MetadataRoute.Sitemap = [];
     for (const country of countries || []) {
         for (const treatment of treatments || []) {
-            const tData = treatment as any;
-            countryTreatmentPages.push({
-                url: `${BASE_URL}/longevity-treatments-in/${country.slug}/${tData.slug}`,
+            treatmentInCountryPages.push({
+                url: `${BASE_URL}/${(treatment as any).slug}/${country.slug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 0.9,
@@ -123,18 +115,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }
     }
 
-    // Generate money pages (treatment in city) - HIGH PRIORITY
-    const moneyPages: MetadataRoute.Sitemap = [];
-
+    // 5. Treatment in City (Dispatcher: /[treatment]/[city]) - MONEY PAGES
+    const treatmentInCityPages: MetadataRoute.Sitemap = [];
     for (const city of cities || []) {
         const cityData = city as any;
         for (const treatment of treatments || []) {
             const treatmentData = treatment as any;
-            moneyPages.push({
-                url: `${BASE_URL}/longevity-treatments-in/${cityData.countries?.slug}/${cityData.slug}/${treatmentData.slug}`,
+            treatmentInCityPages.push({
+                url: `${BASE_URL}/${treatmentData.slug}/${cityData.slug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly' as const,
-                priority: 1.0, // Highest priority - money pages
+                priority: 1.0,
             });
         }
     }
@@ -142,11 +133,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return [
         ...staticPages,
         ...countryPages,
-        ...countryTreatmentIndices,
         ...cityPages,
         ...categoryPages,
         ...treatmentPages,
-        ...countryTreatmentPages,
-        ...moneyPages,
+        ...treatmentInCountryPages,
+        ...treatmentInCityPages,
     ];
 }
