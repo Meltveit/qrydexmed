@@ -158,7 +158,7 @@ export default async function LocationDispatcherPage({ params }: Props) {
                             {cities?.map((city) => (
                                 <Link
                                     key={city.id}
-                                    href={`/${treatment.slug}/${city.slug}`} // Or /in-city
+                                    href={`/${treatment.slug}/in-${city.slug}`}
                                     className="bg-white border border-slate-200 p-6 rounded-xl hover:border-emerald-500 hover:shadow-lg transition group"
                                 >
                                     <div className="flex justify-between items-center mb-2">
@@ -212,7 +212,7 @@ export default async function LocationDispatcherPage({ params }: Props) {
             { name: 'Home', url: 'https://longevityindex.com/' },
             { name: 'Treatments', url: 'https://longevityindex.com/treatments' },
             { name: treatment.name, url: `https://longevityindex.com/${treatment.slug}` },
-            { name: country.name, url: `https://longevityindex.com/${treatment.slug}/${country.slug}` },
+            { name: country.name, url: `https://longevityindex.com/${treatment.slug}/in-${country.slug}` },
             { name: city.name, url: `https://longevityindex.com/${treatment.slug}/${locationParam}` },
         ];
 
@@ -240,7 +240,7 @@ export default async function LocationDispatcherPage({ params }: Props) {
                         <ChevronRight className="w-4 h-4" />
                         <Link href={`/${treatment.slug}`} className="hover:text-slate-900">{treatment.name}</Link>
                         <ChevronRight className="w-4 h-4" />
-                        <Link href={`/${treatment.slug}/${country.slug}`} className="hover:text-slate-900">{country.name}</Link>
+                        <Link href={`/${treatment.slug}/in-${country.slug}`} className="hover:text-slate-900">{country.name}</Link>
                         <ChevronRight className="w-4 h-4" />
                         <span className="text-slate-900 font-medium">{city.name}</span>
                     </nav>

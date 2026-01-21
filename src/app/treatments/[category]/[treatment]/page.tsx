@@ -228,7 +228,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
                         {topCities?.map((city: any) => (
                             <Link
                                 key={city.slug}
-                                href={`/${treatment.slug}/${city.slug}`}
+                                href={`/${treatment.slug}/in-${city.slug}`}
                                 className="bg-white border border-slate-200 rounded-lg p-4 hover:border-emerald-300 transition group flex items-center justify-between"
                             >
                                 <div className="flex items-center gap-3">

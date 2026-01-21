@@ -102,12 +102,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 1.0,
     }));
 
-    // 4. Treatment in Country (Dispatcher: /[treatment]/[country])
+    // 4. Treatment in Country (Dispatcher: /[treatment]/in-[country])
     const treatmentInCountryPages: MetadataRoute.Sitemap = [];
     for (const country of countries || []) {
         for (const treatment of treatments || []) {
             treatmentInCountryPages.push({
-                url: `${BASE_URL}/${(treatment as any).slug}/${country.slug}`,
+                url: `${BASE_URL}/${(treatment as any).slug}/in-${country.slug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 0.9,
@@ -115,14 +115,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }
     }
 
-    // 5. Treatment in City (Dispatcher: /[treatment]/[city]) - MONEY PAGES
+    // 5. Treatment in City (Dispatcher: /[treatment]/in-[city]) - MONEY PAGES
     const treatmentInCityPages: MetadataRoute.Sitemap = [];
     for (const city of cities || []) {
         const cityData = city as any;
         for (const treatment of treatments || []) {
             const treatmentData = treatment as any;
             treatmentInCityPages.push({
-                url: `${BASE_URL}/${treatmentData.slug}/${cityData.slug}`,
+                url: `${BASE_URL}/${treatmentData.slug}/in-${cityData.slug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 1.0,

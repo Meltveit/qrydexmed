@@ -228,7 +228,7 @@ export default async function GlobalTreatmentPage({ params }: Props) {
                             {countries.map((country: any) => (
                                 <Link
                                     key={country.slug}
-                                    href={`/${treatment.slug}/${country.slug}`} // Or /in-{country.slug}
+                                    href={`/${treatment.slug}/in-${country.slug}`}
                                     className="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300"
                                 >
                                     <div className="flex justify-between items-start mb-4">
